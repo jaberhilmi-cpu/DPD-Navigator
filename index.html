@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1f2937">
+<meta name="mobile-web-app-capable" content="yes">
+
+    <title>DPD Navigator - Tournée 122</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .panel {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            z-index: 1000;
+
+            background: white;
+            padding: 10px;
+
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        select {
+            font-size: 16px;
+            padding: 6px;
+        }
+
+        .code {
+            font-size: 18px;
+            font-weight: bold;
+            color: #c00000;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="panel">
+    <select id="zoneSelect">
+        <option value="all">Toutes les zones</option>
+    </select>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+
+const map = L.map("map").setView([46.19, 6.14], 13);
+
+L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap"
+    }
+).addTo(map);
+
+
+const zoneColors = {
+    1: "#e6194B",
+    2: "#3cb44b",
+    3: "#ffe119",
+    4: "#4363d8",
+    5: "#f58231",
+    6: "#911eb4",
+    7: "#46f0f0",
+    8: "#f032e6",
+    9: "#bcf60c",
+    10: "#fabebe",
+    11: "#008080",
+    12: "#e6beff",
+    13: "#9a6324"
+};
+
+
+let allData = [];
+
+let markersLayer = L.layerGroup().addTo(map);
+
+
+function getMarkerColor(zone) {
+
+    return zoneColors[zone] || "#333333";
+
+}
+
+
+function createMarker(point) {
+
+    const color = getMarkerColor(point.Zone);
+
+    const marker = L.circleMarker(
+        [point.Latitude, point.Longitude],
+        {
+            radius: 7,
+            color: color,
+            fillColor: color,
+            fillOpacity: 0.85,
+            weight: 2
+        }
+    );
+
+
+    let popup = `
+        <b>Zone ${point.Zone}</b><br>
+        ${point.Adresse}
+    `;
+
+
+    if (point.Code && point.Code.trim() !== "") {
+
+        popup += `
+            <br><br>
+            <span class="code">
+                🔑 ${point.Code}
+            </span>
+        `;
+
+    }
+
+
+    marker.bindPopup(popup);
+
+    return marker;
+
+}
+
+
+function displayZone(zone) {
+
+    markersLayer.clearLayers();
+
+
+    let filteredData;
+
+
+    if (zone === "all") {
+
+        filteredData = allData;
+
+    } else {
+
+        filteredData = allData.filter(
+            point => String(point.Zone) === String(zone)
+        );
+
+    }
+
+
+    const bounds = [];
+
+
+    filteredData.forEach(point => {
+
+        if (
+            point.Latitude !== null &&
+            point.Longitude !== null
+        ) {
+
+            const marker = createMarker(point);
+
+            marker.addTo(markersLayer);
+
+            bounds.push([
+                point.Latitude,
+                point.Longitude
+            ]);
+
+        }
+
+    });
+
+
+    if (bounds.length > 0) {
+
+        map.fitBounds(bounds, {
+            padding: [30, 30]
+        });
+
+    }
+
+}
+
+
+fetch("zones.json")
+
+    .then(response => response.json())
+
+    .then(data => {
+
+        allData = data;
+
+
+        const zones = [
+
+            ...new Set(
+
+                data.map(point => point.Zone)
+
+            )
+
+        ].sort(
+
+            (a, b) => Number(a) - Number(b)
+
+        );
+
+
+        const select = document.getElementById("zoneSelect");
+
+
+        zones.forEach(zone => {
+
+            const option = document.createElement("option");
+
+            option.value = zone;
+
+            option.textContent = "Zone " + zone;
+
+            select.appendChild(option);
+
+        });
+
+
+        select.addEventListener("change", function() {
+
+            displayZone(this.value);
+
+        });
+
+
+        displayZone("all");
+
+    })
+
+    .catch(error => {
+
+        console.error(error);
+
+        alert("Impossible de charger zones.json");
+
+    });
+
+
+</script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("Application hors ligne activée"))
+      .catch(error => console.error("Erreur Service Worker", error));
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,2840 @@
+[
+    {
+        "Zone": 1,
+        "Adresse": "Trèfle Blanc 14",
+        "Latitude": 46.1713557,
+        "Longitude": 6.1264185
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Trèfle Blanc 16",
+        "Latitude": 46.1711541,
+        "Longitude": 6.1263882
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Trèfle Blanc 18",
+        "Latitude": 46.1709147,
+        "Longitude": 6.1271733
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Chemin du Sapey 1",
+        "Latitude": 46.1716484,
+        "Longitude": 6.1278578
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Chemin du Sapey 3",
+        "Latitude": 46.1716484,
+        "Longitude": 6.1278578
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Chemin du Sapey 5",
+        "Latitude": 46.1716484,
+        "Longitude": 6.1278578
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Chemin du Sapey 7",
+        "Latitude": 46.1716484,
+        "Longitude": 6.1278578
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 67",
+        "Latitude": 46.1732261,
+        "Longitude": 6.1282548
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 65",
+        "Latitude": 46.1732261,
+        "Longitude": 6.1282548
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 63",
+        "Latitude": 46.1732261,
+        "Longitude": 6.1282548
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 61",
+        "Latitude": 46.1732261,
+        "Longitude": 6.1282548
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Grange-Collomb 50",
+        "Latitude": 46.1744623,
+        "Longitude": 6.1368728
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Grange-Collomb 52",
+        "Latitude": 46.1745158,
+        "Longitude": 6.1366401
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Grange-Collomb 54",
+        "Latitude": 46.1745665,
+        "Longitude": 6.1364505
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Grange-Collomb 56",
+        "Latitude": 46.1746279,
+        "Longitude": 6.136252
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Grange-Collomb 58",
+        "Latitude": 46.1746945,
+        "Longitude": 6.1360431
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Grange-Collomb 62",
+        "Latitude": 46.1752192,
+        "Longitude": 6.1339767
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Grange-Collomb 63",
+        "Latitude": 46.1752192,
+        "Longitude": 6.1339767
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Grange-Collomb 64",
+        "Latitude": 46.1752192,
+        "Longitude": 6.1339767
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 25",
+        "Latitude": 46.175996,
+        "Longitude": 6.1345984
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 23",
+        "Latitude": 46.1764525,
+        "Longitude": 6.1333605
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 21",
+        "Latitude": 46.1766132,
+        "Longitude": 6.1334742
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 19",
+        "Latitude": 46.1767122,
+        "Longitude": 6.1336988
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 17",
+        "Latitude": 46.1797667,
+        "Longitude": 6.138165
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 15",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 13",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 11",
+        "Latitude": 46.1769914,
+        "Longitude": 6.1341411
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 9",
+        "Latitude": 46.1797667,
+        "Longitude": 6.138165
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 7",
+        "Latitude": 46.1719635,
+        "Longitude": 6.1250715
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 5",
+        "Latitude": 46.1781146,
+        "Longitude": 6.136268
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 3A",
+        "Latitude": 46.179264,
+        "Longitude": 6.1379051
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 3b",
+        "Latitude": 46.1791305,
+        "Longitude": 6.1376912
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 4",
+        "Latitude": 46.1798449,
+        "Longitude": 6.1380435
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 5",
+        "Latitude": 46.1781146,
+        "Longitude": 6.136268
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 6",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 7",
+        "Latitude": 46.1719635,
+        "Longitude": 6.1250715
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 8",
+        "Latitude": 46.1797125,
+        "Longitude": 6.1378007
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 9",
+        "Latitude": 46.1797667,
+        "Longitude": 6.138165
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 10",
+        "Latitude": 46.1796057,
+        "Longitude": 6.13769
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 11",
+        "Latitude": 46.1769914,
+        "Longitude": 6.1341411
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 12",
+        "Latitude": 46.1794897,
+        "Longitude": 6.1375007
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 13",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 14",
+        "Latitude": 46.1797667,
+        "Longitude": 6.138165
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 15",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 16",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 17",
+        "Latitude": 46.1797667,
+        "Longitude": 6.138165
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 18",
+        "Latitude": 46.179281,
+        "Longitude": 6.1371299
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 19",
+        "Latitude": 46.1767122,
+        "Longitude": 6.1336988
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 20",
+        "Latitude": 46.1791274,
+        "Longitude": 6.1368799
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 21",
+        "Latitude": 46.1766132,
+        "Longitude": 6.1334742
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 22",
+        "Latitude": 46.1790065,
+        "Longitude": 6.1366835
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 23",
+        "Latitude": 46.1764525,
+        "Longitude": 6.1333605
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 24",
+        "Latitude": 46.1789022,
+        "Longitude": 6.136513
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 25",
+        "Latitude": 46.175996,
+        "Longitude": 6.1345984
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 26",
+        "Latitude": 46.1787444,
+        "Longitude": 6.1361772
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 27",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 28",
+        "Latitude": 46.178607,
+        "Longitude": 6.1360214
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 29",
+        "Latitude": 46.1754839,
+        "Longitude": 6.1324116
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 30",
+        "Latitude": 46.1785197,
+        "Longitude": 6.1358763
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 31",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 32",
+        "Latitude": 46.1784147,
+        "Longitude": 6.1356997
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 33",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 34",
+        "Latitude": 46.1787052,
+        "Longitude": 6.1354413
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 35",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 36",
+        "Latitude": 46.1784079,
+        "Longitude": 6.1348405
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 37",
+        "Latitude": 46.1797667,
+        "Longitude": 6.138165
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 38",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 39",
+        "Latitude": 46.1727195,
+        "Longitude": 6.1263832
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 40",
+        "Latitude": 46.1775103,
+        "Longitude": 6.1333334
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 41",
+        "Latitude": 46.1719635,
+        "Longitude": 6.1250715
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 42",
+        "Latitude": 46.1797667,
+        "Longitude": 6.138165
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 43",
+        "Latitude": 46.1797667,
+        "Longitude": 6.138165
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 44",
+        "Latitude": 46.1772107,
+        "Longitude": 6.133011
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 45",
+        "Latitude": 46.1797667,
+        "Longitude": 6.138165
+    },
+    {
+        "Zone": 1,
+        "Adresse": "Route de Saint-Julien 46",
+        "Latitude": 46.1762991,
+        "Longitude": 6.1322565
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 105",
+        "Latitude": 46.1762761,
+        "Longitude": 6.1294232
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 103",
+        "Latitude": 46.1769767,
+        "Longitude": 6.1305633
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 101",
+        "Latitude": 46.1771162,
+        "Longitude": 6.1307849
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 99",
+        "Latitude": 46.177625,
+        "Longitude": 6.1310844
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 97",
+        "Latitude": 46.1969134,
+        "Longitude": 6.1278312
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 95",
+        "Latitude": 46.1771555,
+        "Longitude": 6.1300429
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 93",
+        "Latitude": 46.1767685,
+        "Longitude": 6.1294745
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 91",
+        "Latitude": 46.1771335,
+        "Longitude": 6.1294046
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 89",
+        "Latitude": 46.1775735,
+        "Longitude": 6.1301038
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 87",
+        "Latitude": 46.177853,
+        "Longitude": 6.1297157
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 85",
+        "Latitude": 46.1785376,
+        "Longitude": 6.1306809
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 83",
+        "Latitude": 46.1802482,
+        "Longitude": 6.1289325
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 81",
+        "Latitude": 46.1817382,
+        "Longitude": 6.1284886
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 79",
+        "Latitude": 46.1775945,
+        "Longitude": 6.1293513
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 77",
+        "Latitude": 46.1788022,
+        "Longitude": 6.1299538
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 75",
+        "Latitude": 46.1874348,
+        "Longitude": 6.1278705
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 73",
+        "Latitude": 46.1969134,
+        "Longitude": 6.1278312
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 71",
+        "Latitude": 46.1874348,
+        "Longitude": 6.1278705
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 69",
+        "Latitude": 46.1791309,
+        "Longitude": 6.1305171
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 67",
+        "Latitude": 46.1817382,
+        "Longitude": 6.1284886
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 65",
+        "Latitude": 46.1789541,
+        "Longitude": 6.1294642
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 63",
+        "Latitude": 46.1793222,
+        "Longitude": 6.1292618
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 61",
+        "Latitude": 46.1817382,
+        "Longitude": 6.1284886
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 59",
+        "Latitude": 46.1805283,
+        "Longitude": 6.1293122
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 57",
+        "Latitude": 46.18122,
+        "Longitude": 6.130182
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 55",
+        "Latitude": 46.1815317,
+        "Longitude": 6.130616
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 53",
+        "Latitude": 46.182272,
+        "Longitude": 6.1309673
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 51",
+        "Latitude": 46.1818847,
+        "Longitude": 6.1303992
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 49",
+        "Latitude": 46.1815409,
+        "Longitude": 6.1300156
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 47",
+        "Latitude": 46.1811415,
+        "Longitude": 6.1293465
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 45",
+        "Latitude": 46.1815666,
+        "Longitude": 6.1292709
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 43",
+        "Latitude": 46.1819364,
+        "Longitude": 6.1297455
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 41",
+        "Latitude": 46.1831679,
+        "Longitude": 6.130551
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 39",
+        "Latitude": 46.1826284,
+        "Longitude": 6.1296167
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 37",
+        "Latitude": 46.182316,
+        "Longitude": 6.1291776
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 35",
+        "Latitude": 46.1827806,
+        "Longitude": 6.129155
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 33",
+        "Latitude": 46.1833046,
+        "Longitude": 6.130048
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 31",
+        "Latitude": 46.1834935,
+        "Longitude": 6.1303227
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 29",
+        "Latitude": 46.184029,
+        "Longitude": 6.1304462
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 27",
+        "Latitude": 46.1833172,
+        "Longitude": 6.1294558
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 25",
+        "Latitude": 46.1832168,
+        "Longitude": 6.1293072
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 23",
+        "Latitude": 46.1836672,
+        "Longitude": 6.1292392
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 21",
+        "Latitude": 46.1842324,
+        "Longitude": 6.1300911
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 19",
+        "Latitude": 46.1843852,
+        "Longitude": 6.1302852
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 17",
+        "Latitude": 46.1817382,
+        "Longitude": 6.1284886
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 15",
+        "Latitude": 46.1841206,
+        "Longitude": 6.1291249
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Route des Jeunes 13",
+        "Latitude": 46.1854019,
+        "Longitude": 6.1289763
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Rue Antoine-Jolivet 7",
+        "Latitude": 46.1846846,
+        "Longitude": 6.1290911
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Rue Antoine-Jolivet 5",
+        "Latitude": 46.1851648,
+        "Longitude": 6.129838
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Rue Antoine-Jolivet 3",
+        "Latitude": 46.1853608,
+        "Longitude": 6.130107
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Rue Antoine-Jolivet 1",
+        "Latitude": 46.1855029,
+        "Longitude": 6.1303477
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Rue Antoine-Jolivet 6",
+        "Latitude": 46.1858925,
+        "Longitude": 6.1297353
+    },
+    {
+        "Zone": 2,
+        "Adresse": "Rue Antoine-Jolivet 4",
+        "Latitude": 46.1863407,
+        "Longitude": 6.129619
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Avenue de la Praille 45",
+        "Latitude": 46.1864293,
+        "Longitude": 6.1326659
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Avenue de la Praille 50",
+        "Latitude": 46.1873756,
+        "Longitude": 6.1289429
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Avenue de la Praille 55",
+        "Latitude": 46.1866811,
+        "Longitude": 6.1288954
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Jeunes 9",
+        "Latitude": 46.1882435,
+        "Longitude": 6.1284959
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Acacias 45B",
+        "Latitude": 46.1889696,
+        "Longitude": 6.1291331
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Acacias 45A",
+        "Latitude": 46.1886977,
+        "Longitude": 6.1294014
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Acacias 47",
+        "Latitude": 46.1884206,
+        "Longitude": 6.1295504
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Jeunes 5E",
+        "Latitude": 46.1802482,
+        "Longitude": 6.1289325
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Jeunes 5D",
+        "Latitude": 46.1915168,
+        "Longitude": 6.1284752
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Jeunes 5C",
+        "Latitude": 46.1917554,
+        "Longitude": 6.1286249
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Jeunes 5B",
+        "Latitude": 46.1969134,
+        "Longitude": 6.1278312
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Jeunes 5A",
+        "Latitude": 46.1943514,
+        "Longitude": 6.1285634
+    },
+    {
+        "Zone": 3,
+        "Adresse": "Route des Jeunes 5",
+        "Latitude": 46.1946905,
+        "Longitude": 6.1287624
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue François-Dussaud 3",
+        "Latitude": 46.1928406,
+        "Longitude": 6.1334832
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue François-Dussaud 5",
+        "Latitude": 46.193476,
+        "Longitude": 6.1326271
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue François-Dussaud 7",
+        "Latitude": 46.1935342,
+        "Longitude": 6.1321414
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 14",
+        "Latitude": 46.1932945,
+        "Longitude": 6.1302738
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 33",
+        "Latitude": 46.1931996,
+        "Longitude": 6.1295547
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 34",
+        "Latitude": 46.1922925,
+        "Longitude": 6.1314575
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 35",
+        "Latitude": 46.1933446,
+        "Longitude": 6.1292973
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 36",
+        "Latitude": 46.1914212,
+        "Longitude": 6.1309791
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 37",
+        "Latitude": 46.193482,
+        "Longitude": 6.1290311
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 38",
+        "Latitude": 46.1922925,
+        "Longitude": 6.1314575
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 39",
+        "Latitude": 46.193609,
+        "Longitude": 6.1288282
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 40",
+        "Latitude": 46.1922925,
+        "Longitude": 6.1314575
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 41",
+        "Latitude": 46.193707,
+        "Longitude": 6.1286543
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 14",
+        "Latitude": 46.1932945,
+        "Longitude": 6.1302738
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 15",
+        "Latitude": 46.1911292,
+        "Longitude": 6.1326892
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 16",
+        "Latitude": 46.1934751,
+        "Longitude": 6.1296576
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 17",
+        "Latitude": 46.190833,
+        "Longitude": 6.131349
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 18",
+        "Latitude": 46.1937412,
+        "Longitude": 6.1294865
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 19",
+        "Latitude": 46.1917223,
+        "Longitude": 6.1320448
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 20",
+        "Latitude": 46.1937763,
+        "Longitude": 6.1291092
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 21",
+        "Latitude": 46.1911497,
+        "Longitude": 6.1313535
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Marziano 22",
+        "Latitude": 46.1939078,
+        "Longitude": 6.1285274
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 11",
+        "Latitude": 46.1925786,
+        "Longitude": 6.1305036
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 12",
+        "Latitude": 46.1933487,
+        "Longitude": 6.1304904
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 13",
+        "Latitude": 46.1929148,
+        "Longitude": 6.1302793
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 14",
+        "Latitude": 46.1929046,
+        "Longitude": 6.1300393
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 15",
+        "Latitude": 46.1916184,
+        "Longitude": 6.1301254
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 16",
+        "Latitude": 46.1927197,
+        "Longitude": 6.1298414
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 17",
+        "Latitude": 46.1912172,
+        "Longitude": 6.1300689
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 18",
+        "Latitude": 46.1925616,
+        "Longitude": 6.1296469
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 18",
+        "Latitude": 46.1925616,
+        "Longitude": 6.1296469
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 19",
+        "Latitude": 46.1909372,
+        "Longitude": 6.130069
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 20",
+        "Latitude": 46.1917554,
+        "Longitude": 6.1291212
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 21",
+        "Latitude": 46.1929148,
+        "Longitude": 6.1302793
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 22",
+        "Latitude": 46.191119,
+        "Longitude": 6.1290596
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 23",
+        "Latitude": 46.1929148,
+        "Longitude": 6.1302793
+    },
+    {
+        "Zone": 4,
+        "Adresse": "Rue Boissonnas 24",
+        "Latitude": 46.1929148,
+        "Longitude": 6.1302793
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 43",
+        "Latitude": 46.1922925,
+        "Longitude": 6.1314575
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 17",
+        "Latitude": 46.190833,
+        "Longitude": 6.131349
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 18",
+        "Latitude": 46.1937412,
+        "Longitude": 6.1294865
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 19",
+        "Latitude": 46.1917223,
+        "Longitude": 6.1320448
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 20",
+        "Latitude": 46.1937763,
+        "Longitude": 6.1291092
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 21",
+        "Latitude": 46.1911497,
+        "Longitude": 6.1313535
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 23",
+        "Latitude": 46.1919711,
+        "Longitude": 6.1316586
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 24",
+        "Latitude": 46.1922925,
+        "Longitude": 6.1314575
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 25",
+        "Latitude": 46.1912497,
+        "Longitude": 6.1307245
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Route des Acacias 23",
+        "Latitude": 46.1914347,
+        "Longitude": 6.1354178
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Route des Acacias 25",
+        "Latitude": 46.1912596,
+        "Longitude": 6.1350207
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Route des Acacias 27",
+        "Latitude": 46.1909874,
+        "Longitude": 6.1344182
+    },
+    {
+        "Zone": 5,
+        "Adresse": "Rue Marziano 15",
+        "Latitude": 46.1911292,
+        "Longitude": 6.1326892
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 48",
+        "Latitude": 46.1893462,
+        "Longitude": 6.1323585
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 47",
+        "Latitude": 46.1884206,
+        "Longitude": 6.1295504
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 46",
+        "Latitude": 46.1877403,
+        "Longitude": 6.1284305
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 45",
+        "Latitude": 46.1888457,
+        "Longitude": 6.1299088
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 44",
+        "Latitude": 46.1899138,
+        "Longitude": 6.1334342
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 43",
+        "Latitude": 46.1898396,
+        "Longitude": 6.1304493
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 42",
+        "Latitude": 46.1899777,
+        "Longitude": 6.1335565
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 41",
+        "Latitude": 46.1898379,
+        "Longitude": 6.1317453
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 40",
+        "Latitude": 46.1900633,
+        "Longitude": 6.1337202
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 39",
+        "Latitude": 46.1877403,
+        "Longitude": 6.1284305
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 38",
+        "Latitude": 46.1902664,
+        "Longitude": 6.1339394
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 37",
+        "Latitude": 46.1877403,
+        "Longitude": 6.1284305
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 36",
+        "Latitude": 46.1904113,
+        "Longitude": 6.1341759
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 35",
+        "Latitude": 46.1877403,
+        "Longitude": 6.1284305
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 34",
+        "Latitude": 46.1905606,
+        "Longitude": 6.1345372
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 33",
+        "Latitude": 46.1921277,
+        "Longitude": 6.1371465
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 32",
+        "Latitude": 46.1906718,
+        "Longitude": 6.1347588
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 31",
+        "Latitude": 46.1877403,
+        "Longitude": 6.1284305
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 30",
+        "Latitude": 46.1907717,
+        "Longitude": 6.1349577
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 29",
+        "Latitude": 46.1877403,
+        "Longitude": 6.1284305
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 28",
+        "Latitude": 46.1909054,
+        "Longitude": 6.1353257
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 27",
+        "Latitude": 46.1909874,
+        "Longitude": 6.1344182
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 26",
+        "Latitude": 46.1910012,
+        "Longitude": 6.1355231
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 25",
+        "Latitude": 46.1912596,
+        "Longitude": 6.1350207
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 24",
+        "Latitude": 46.1911089,
+        "Longitude": 6.1357216
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 23",
+        "Latitude": 46.1914347,
+        "Longitude": 6.1354178
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 22",
+        "Latitude": 46.1877403,
+        "Longitude": 6.1284305
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 21",
+        "Latitude": 46.1917939,
+        "Longitude": 6.1359563
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 20",
+        "Latitude": 46.1914594,
+        "Longitude": 6.136302
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 19",
+        "Latitude": 46.1918986,
+        "Longitude": 6.1361612
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 18",
+        "Latitude": 46.1915654,
+        "Longitude": 6.1366098
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 17",
+        "Latitude": 46.1919947,
+        "Longitude": 6.1363411
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 16",
+        "Latitude": 46.1915918,
+        "Longitude": 6.1369121
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 15",
+        "Latitude": 46.1897771,
+        "Longitude": 6.1328183
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 14",
+        "Latitude": 46.1916364,
+        "Longitude": 6.1370029
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 13",
+        "Latitude": 46.1877403,
+        "Longitude": 6.1284305
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 12",
+        "Latitude": 46.1917812,
+        "Longitude": 6.1372844
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 11",
+        "Latitude": 46.1922645,
+        "Longitude": 6.1369371
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 10",
+        "Latitude": 46.1918813,
+        "Longitude": 6.1375365
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 9",
+        "Latitude": 46.1883097,
+        "Longitude": 6.1287741
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 8",
+        "Latitude": 46.1916764,
+        "Longitude": 6.1375326
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 7",
+        "Latitude": 46.1926861,
+        "Longitude": 6.1377911
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 6",
+        "Latitude": 46.1922786,
+        "Longitude": 6.1379238
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 5",
+        "Latitude": 46.1927968,
+        "Longitude": 6.1379903
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 4",
+        "Latitude": 46.1923906,
+        "Longitude": 6.1381474
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 3",
+        "Latitude": 46.1928483,
+        "Longitude": 6.1380469
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 2",
+        "Latitude": 46.1925027,
+        "Longitude": 6.1383709
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Quai des Vernets 1",
+        "Latitude": 46.1930686,
+        "Longitude": 6.1385175
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Quai des Vernets 3",
+        "Latitude": 46.1932129,
+        "Longitude": 6.1382036
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Quai des Vernets 5",
+        "Latitude": 46.1933066,
+        "Longitude": 6.1380626
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Quai des Vernets 7",
+        "Latitude": 46.1934406,
+        "Longitude": 6.1378375
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Quai des Vernets 11",
+        "Latitude": 46.1937623,
+        "Longitude": 6.1372236
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Quai des Vernets 13",
+        "Latitude": 46.1938583,
+        "Longitude": 6.1370494
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 5",
+        "Latitude": 46.1927968,
+        "Longitude": 6.1379903
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 6",
+        "Latitude": 46.1922786,
+        "Longitude": 6.1379238
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 7",
+        "Latitude": 46.1926861,
+        "Longitude": 6.1377911
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 8",
+        "Latitude": 46.1916764,
+        "Longitude": 6.1375326
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 9",
+        "Latitude": 46.1883097,
+        "Longitude": 6.1287741
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 10",
+        "Latitude": 46.1918813,
+        "Longitude": 6.1375365
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 11",
+        "Latitude": 46.1922645,
+        "Longitude": 6.1369371
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 12",
+        "Latitude": 46.1917812,
+        "Longitude": 6.1372844
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 13",
+        "Latitude": 46.1877403,
+        "Longitude": 6.1284305
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 14",
+        "Latitude": 46.1916364,
+        "Longitude": 6.1370029
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 15",
+        "Latitude": 46.1897771,
+        "Longitude": 6.1328183
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 16",
+        "Latitude": 46.1915918,
+        "Longitude": 6.1369121
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 17",
+        "Latitude": 46.1919947,
+        "Longitude": 6.1363411
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 18",
+        "Latitude": 46.1915654,
+        "Longitude": 6.1366098
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 19",
+        "Latitude": 46.1918986,
+        "Longitude": 6.1361612
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 20",
+        "Latitude": 46.1914594,
+        "Longitude": 6.136302
+    },
+    {
+        "Zone": 6,
+        "Adresse": "Route des Acacias 21",
+        "Latitude": 46.1917939,
+        "Longitude": 6.1359563
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Rue Lina Stern",
+        "Latitude": 46.193031,
+        "Longitude": 6.1342147
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Passage Sylver Stern",
+        "Latitude": null,
+        "Longitude": null
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Chemin Hans-Wilsdorf",
+        "Latitude": null,
+        "Longitude": null
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Rue François-Dussaud",
+        "Latitude": 46.1954987,
+        "Longitude": 6.1300494
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Rue de la Gravière 9",
+        "Latitude": null,
+        "Longitude": null
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Rue de la Gravière 8",
+        "Latitude": null,
+        "Longitude": null
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Rue de la Gravière 6",
+        "Latitude": null,
+        "Longitude": null
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Rue de la Gravière 4",
+        "Latitude": null,
+        "Longitude": null
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Rue de la Gravière 5",
+        "Latitude": null,
+        "Longitude": null
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Rue de la Gravière 2",
+        "Latitude": null,
+        "Longitude": null
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Route des Jeunes 3A",
+        "Latitude": 46.1802482,
+        "Longitude": 6.1289325
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Route des Jeunes 3B",
+        "Latitude": 46.1817382,
+        "Longitude": 6.1284886
+    },
+    {
+        "Zone": 7,
+        "Adresse": "Route des Jeunes 1",
+        "Latitude": 46.1985899,
+        "Longitude": 6.1285955
+    },
+    {
+        "Zone": 8,
+        "Adresse": "Route des Jeunes 4",
+        "Latitude": 46.1959459,
+        "Longitude": 6.1277382
+    },
+    {
+        "Zone": 8,
+        "Adresse": "Rampe Quidort 4",
+        "Latitude": 46.1945515,
+        "Longitude": 6.1262855
+    },
+    {
+        "Zone": 8,
+        "Adresse": "Route des Jeunes 4 bis",
+        "Latitude": 46.190359,
+        "Longitude": 6.1273054
+    },
+    {
+        "Zone": 8,
+        "Adresse": "Route des Jeunes 4 ter",
+        "Latitude": 46.1883797,
+        "Longitude": 6.1275419
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Grand-Lancy 2",
+        "Latitude": 46.18287,
+        "Longitude": 6.1138091
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Grand-Lancy 4",
+        "Latitude": 46.1765397,
+        "Longitude": 6.109864
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Grand-Lancy 6",
+        "Latitude": 46.1880365,
+        "Longitude": 6.1266406
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Grand-Lancy 6A",
+        "Latitude": 46.1878042,
+        "Longitude": 6.126173
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Esplanade de Pont-Rouge 9",
+        "Latitude": 46.18648,
+        "Longitude": 6.125995
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Esplanade de Pont-Rouge 6",
+        "Latitude": 46.1872927,
+        "Longitude": 6.125889
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Esplanade de Pont-Rouge 4",
+        "Latitude": 46.1873058,
+        "Longitude": 6.1264522
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Esplanade de Pont-Rouge 2",
+        "Latitude": 46.1871296,
+        "Longitude": 6.1271721
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Esplanade de Pont-Rouge 5",
+        "Latitude": 46.1863736,
+        "Longitude": 6.1270061
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Esplanade de Pont-Rouge 3",
+        "Latitude": 46.1865538,
+        "Longitude": 6.1274091
+    },
+    {
+        "Zone": 9,
+        "Adresse": "Esplanade de Pont-Rouge 1",
+        "Latitude": 46.186669,
+        "Longitude": 6.1277092
+    },
+    {
+        "Zone": 10,
+        "Adresse": "Route des Jeunes 6",
+        "Latitude": 46.1838721,
+        "Longitude": 6.1264182
+    },
+    {
+        "Zone": 10,
+        "Adresse": "Route des Jeunes 8",
+        "Latitude": 46.1799092,
+        "Longitude": 6.1283843
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 10",
+        "Latitude": 46.1796749,
+        "Longitude": 6.1276498
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 12",
+        "Latitude": 46.1792027,
+        "Longitude": 6.1270456
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 16",
+        "Latitude": 46.1782556,
+        "Longitude": 6.1261983
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 20",
+        "Latitude": 46.1765606,
+        "Longitude": 6.1279546
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 24",
+        "Latitude": 46.1764567,
+        "Longitude": 6.1274311
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 25",
+        "Latitude": 46.1832168,
+        "Longitude": 6.1293072
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 26",
+        "Latitude": 46.1760123,
+        "Longitude": 6.1275359
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 27",
+        "Latitude": 46.1833172,
+        "Longitude": 6.1294558
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 28",
+        "Latitude": 46.1762718,
+        "Longitude": 6.1281837
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 29",
+        "Latitude": 46.184029,
+        "Longitude": 6.1304462
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 30",
+        "Latitude": 46.1969134,
+        "Longitude": 6.1278312
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 31",
+        "Latitude": 46.1834935,
+        "Longitude": 6.1303227
+    },
+    {
+        "Zone": 11,
+        "Adresse": "Route des Jeunes 32",
+        "Latitude": 46.1758154,
+        "Longitude": 6.1283862
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Promenade 1",
+        "Latitude": 46.1985593,
+        "Longitude": 6.1502868
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Promenade 3",
+        "Latitude": 46.2079215,
+        "Longitude": 6.1241906
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Promenade 2",
+        "Latitude": 46.1733456,
+        "Longitude": 6.0849429
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Promenade 4",
+        "Latitude": 46.1866432,
+        "Longitude": 6.1431354
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Promenade 6",
+        "Latitude": 46.230217,
+        "Longitude": 6.0710942
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Promenade 8",
+        "Latitude": 46.2002222,
+        "Longitude": 6.1508309
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 10",
+        "Latitude": 46.1843752,
+        "Longitude": 6.137345
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 12",
+        "Latitude": 46.1843635,
+        "Longitude": 6.1371786
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 14",
+        "Latitude": 46.1843518,
+        "Longitude": 6.1370122
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 16",
+        "Latitude": 46.1809464,
+        "Longitude": 6.1320448
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 18",
+        "Latitude": 46.1843284,
+        "Longitude": 6.1366795
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 20",
+        "Latitude": 46.1839765,
+        "Longitude": 6.1364174
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 22",
+        "Latitude": 46.1839628,
+        "Longitude": 6.1362658
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 24",
+        "Latitude": 46.1839492,
+        "Longitude": 6.1361143
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 26",
+        "Latitude": 46.1839356,
+        "Longitude": 6.1359627
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 28",
+        "Latitude": 46.1839219,
+        "Longitude": 6.1358111
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 27",
+        "Latitude": 46.183331,
+        "Longitude": 6.1359274
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 25",
+        "Latitude": 46.1833422,
+        "Longitude": 6.1360735
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 23",
+        "Latitude": 46.1833534,
+        "Longitude": 6.1362196
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 21",
+        "Latitude": 46.1833646,
+        "Longitude": 6.1363657
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 19",
+        "Latitude": 46.1833758,
+        "Longitude": 6.1365118
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 17",
+        "Latitude": 46.1830324,
+        "Longitude": 6.1368981
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 15",
+        "Latitude": 46.1830651,
+        "Longitude": 6.1370729
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 13",
+        "Latitude": 46.1830759,
+        "Longitude": 6.1372155
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 11",
+        "Latitude": 46.1830866,
+        "Longitude": 6.1373576
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 9",
+        "Latitude": 46.1830985,
+        "Longitude": 6.1375151
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 22",
+        "Latitude": 46.1839628,
+        "Longitude": 6.1362658
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Avenue Vibert 20",
+        "Latitude": 46.1839765,
+        "Longitude": 6.1364174
+    },
+    {
+        "Zone": 12,
+        "Adresse": "Vieux Canal",
+        "Latitude": 46.1804941,
+        "Longitude": 6.1388367
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 1",
+        "Latitude": 46.2436135,
+        "Longitude": 6.1460734
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 2",
+        "Latitude": 46.1504026,
+        "Longitude": 5.9704733
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 3",
+        "Latitude": 46.2313686,
+        "Longitude": 6.1279369
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 4",
+        "Latitude": 46.1831652,
+        "Longitude": 6.141243
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 5",
+        "Latitude": 46.1829691,
+        "Longitude": 6.1415521
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 6",
+        "Latitude": 46.2440665,
+        "Longitude": 6.1469253
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 7",
+        "Latitude": 46.182852,
+        "Longitude": 6.1414238
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 8",
+        "Latitude": 46.2196261,
+        "Longitude": 6.2217071
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 9",
+        "Latitude": 46.1827926,
+        "Longitude": 6.1413971
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 10",
+        "Latitude": 46.2446572,
+        "Longitude": 6.2309163
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 11",
+        "Latitude": 46.182659,
+        "Longitude": 6.1414021
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 12",
+        "Latitude": 46.2447341,
+        "Longitude": 6.2310072
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 13",
+        "Latitude": 46.2448725,
+        "Longitude": 6.2312442
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 14",
+        "Latitude": 46.1828424,
+        "Longitude": 6.1411085
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 15",
+        "Latitude": 46.2322037,
+        "Longitude": 6.1269706
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 16",
+        "Latitude": 46.1827357,
+        "Longitude": 6.1410686
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 17",
+        "Latitude": 46.2321331,
+        "Longitude": 6.1265386
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 18",
+        "Latitude": 46.2443018,
+        "Longitude": 6.2314616
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 19",
+        "Latitude": 46.1823651,
+        "Longitude": 6.1413123
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 20",
+        "Latitude": 46.2205285,
+        "Longitude": 6.2226299
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 21",
+        "Latitude": 46.1822273,
+        "Longitude": 6.1413745
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 22",
+        "Latitude": 46.2334584,
+        "Longitude": 6.12919
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 23",
+        "Latitude": 46.1821432,
+        "Longitude": 6.1412359
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 24",
+        "Latitude": 46.2342858,
+        "Longitude": 6.1283024
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 25",
+        "Latitude": 46.1820774,
+        "Longitude": 6.1412613
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 26",
+        "Latitude": 46.2345364,
+        "Longitude": 6.1282216
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 27",
+        "Latitude": 46.1820062,
+        "Longitude": 6.1411889
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 28",
+        "Latitude": 46.2348562,
+        "Longitude": 6.1281865
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 29",
+        "Latitude": 46.1819386,
+        "Longitude": 6.1411913
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 30",
+        "Latitude": 46.2350045,
+        "Longitude": 6.128146
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 31",
+        "Latitude": 46.1818458,
+        "Longitude": 6.1411181
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 32",
+        "Latitude": 46.1821357,
+        "Longitude": 6.1409376
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 33",
+        "Latitude": 46.1816955,
+        "Longitude": 6.1410826
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 34",
+        "Latitude": 46.2354162,
+        "Longitude": 6.1280485
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 35",
+        "Latitude": 46.1815781,
+        "Longitude": 6.1412273
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 36",
+        "Latitude": 46.2354848,
+        "Longitude": 6.1279497
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 37",
+        "Latitude": 46.1817516,
+        "Longitude": 6.1418353
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 38",
+        "Latitude": 46.2355353,
+        "Longitude": 6.1278971
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 39",
+        "Latitude": 46.1813487,
+        "Longitude": 6.1410746
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 40",
+        "Latitude": 46.2355816,
+        "Longitude": 6.1278312
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 41",
+        "Latitude": 46.181264,
+        "Longitude": 6.1409709
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 42",
+        "Latitude": 46.2356261,
+        "Longitude": 6.127792
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 43",
+        "Latitude": 46.1811788,
+        "Longitude": 6.1409356
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 44",
+        "Latitude": 46.2358043,
+        "Longitude": 6.1275537
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 45",
+        "Latitude": 46.1810996,
+        "Longitude": 6.1408689
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 46",
+        "Latitude": 46.2358697,
+        "Longitude": 6.1275127
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 47",
+        "Latitude": 46.1810229,
+        "Longitude": 6.1408063
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 48",
+        "Latitude": 46.1817147,
+        "Longitude": 6.1404958
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 49",
+        "Latitude": 46.1809048,
+        "Longitude": 6.1406862
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 50",
+        "Latitude": 46.1815429,
+        "Longitude": 6.14074
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 51",
+        "Latitude": 46.1805844,
+        "Longitude": 6.1403757
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 52",
+        "Latitude": 46.2362515,
+        "Longitude": 6.1269728
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 53",
+        "Latitude": 46.1804624,
+        "Longitude": 6.1403281
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 54",
+        "Latitude": 46.2362933,
+        "Longitude": 6.1268936
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 55",
+        "Latitude": 46.1803688,
+        "Longitude": 6.1406317
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 56",
+        "Latitude": 46.1813611,
+        "Longitude": 6.1407183
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 57",
+        "Latitude": 46.235339,
+        "Longitude": 6.1277077
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 58",
+        "Latitude": 46.1812931,
+        "Longitude": 6.1407013
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 59",
+        "Latitude": 46.1803366,
+        "Longitude": 6.1401455
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 60",
+        "Latitude": 46.1811894,
+        "Longitude": 6.1406892
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 61",
+        "Latitude": 46.1801833,
+        "Longitude": 6.1400174
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 62",
+        "Latitude": 46.1811167,
+        "Longitude": 6.1406416
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 63",
+        "Latitude": 46.1801125,
+        "Longitude": 6.1399633
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 64",
+        "Latitude": 46.2368435,
+        "Longitude": 6.1263067
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 65",
+        "Latitude": 46.1800448,
+        "Longitude": 6.1398939
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 66",
+        "Latitude": 46.2372753,
+        "Longitude": 6.1261223
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 67",
+        "Latitude": 46.179997,
+        "Longitude": 6.139846
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 68",
+        "Latitude": 46.2375156,
+        "Longitude": 6.1257529
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 69",
+        "Latitude": 46.2365114,
+        "Longitude": 6.1259936
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 70",
+        "Latitude": 46.1803638,
+        "Longitude": 6.1398699
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 71",
+        "Latitude": 46.2366783,
+        "Longitude": 6.1259069
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 72",
+        "Latitude": 46.2381041,
+        "Longitude": 6.1251969
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 74",
+        "Latitude": 46.2381765,
+        "Longitude": 6.1249421
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 76",
+        "Latitude": 46.2388561,
+        "Longitude": 6.1246262
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 78",
+        "Latitude": 46.1806241,
+        "Longitude": 6.1399379
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 80",
+        "Latitude": 46.1805919,
+        "Longitude": 6.1398699
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 82",
+        "Latitude": 46.1805469,
+        "Longitude": 6.1397878
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 84",
+        "Latitude": 46.1805111,
+        "Longitude": 6.1396655
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 86",
+        "Latitude": 46.1803795,
+        "Longitude": 6.1395005
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Ancienne 88",
+        "Latitude": 46.1803222,
+        "Longitude": 6.1393534
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Place du rondeau 4",
+        "Latitude": 46.1803844,
+        "Longitude": 6.1392146
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Place du rondeau 5",
+        "Latitude": 46.1798007,
+        "Longitude": 6.1395013
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Place du rondeau 6",
+        "Latitude": 46.179969,
+        "Longitude": 6.1389203
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Place du rondeau 7",
+        "Latitude": 46.1797153,
+        "Longitude": 6.1394262
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Place du rondeau 8",
+        "Latitude": 46.1803547,
+        "Longitude": 6.1386869
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 2",
+        "Latitude": 46.1805993,
+        "Longitude": 6.1404508
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 4",
+        "Latitude": 46.1805997,
+        "Longitude": 6.1405201
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 6",
+        "Latitude": 46.1805866,
+        "Longitude": 6.1405959
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 8",
+        "Latitude": 46.1805905,
+        "Longitude": 6.1406548
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 10",
+        "Latitude": 46.1806206,
+        "Longitude": 6.140709
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 12",
+        "Latitude": 46.1805929,
+        "Longitude": 6.1408245
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 14",
+        "Latitude": 46.1806467,
+        "Longitude": 6.1409828
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 16",
+        "Latitude": 46.1806689,
+        "Longitude": 6.1412703
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 16 Bis",
+        "Latitude": 46.1805729,
+        "Longitude": 6.1415333
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 8",
+        "Latitude": 46.1803134,
+        "Longitude": 6.1416806
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 6",
+        "Latitude": 46.1800874,
+        "Longitude": 6.1418998
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 10",
+        "Latitude": 46.1802057,
+        "Longitude": 6.141537
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 12",
+        "Latitude": 46.1801024,
+        "Longitude": 6.1413307
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 14",
+        "Latitude": 46.1800271,
+        "Longitude": 6.1414099
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 16",
+        "Latitude": 46.1799156,
+        "Longitude": 6.1415535
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 18",
+        "Latitude": 46.179811,
+        "Longitude": 6.1416861
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 20",
+        "Latitude": 46.1798381,
+        "Longitude": 6.141839
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 22",
+        "Latitude": 46.1799085,
+        "Longitude": 6.1421203
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 15",
+        "Latitude": 46.1798538,
+        "Longitude": 6.1426733
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 17",
+        "Latitude": 46.1798303,
+        "Longitude": 6.1427036
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 9",
+        "Latitude": 46.180082,
+        "Longitude": 6.1424905
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tunnel 11",
+        "Latitude": 46.1801277,
+        "Longitude": 6.1426207
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 18",
+        "Latitude": 46.1806948,
+        "Longitude": 6.1420354
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 20",
+        "Latitude": 46.1805104,
+        "Longitude": 6.1421788
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 22",
+        "Latitude": 46.1807285,
+        "Longitude": 6.1426345
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 24",
+        "Latitude": 46.1807887,
+        "Longitude": 6.1430043
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tir Au canon 4",
+        "Latitude": 46.1804653,
+        "Longitude": 6.1434644
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tir Au canon 6",
+        "Latitude": 46.180386,
+        "Longitude": 6.1439155
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tir Au canon 9",
+        "Latitude": 46.1806724,
+        "Longitude": 6.1438116
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tir Au canon 7",
+        "Latitude": 46.1807559,
+        "Longitude": 6.1437283
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tir Au canon 5",
+        "Latitude": 46.1809231,
+        "Longitude": 6.1435617
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tir Au canon 3",
+        "Latitude": 46.180386,
+        "Longitude": 6.1439155
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tir Au canon 1",
+        "Latitude": 46.1810066,
+        "Longitude": 6.1434783
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 22",
+        "Latitude": 46.1807285,
+        "Longitude": 6.1426345
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 24",
+        "Latitude": 46.1807887,
+        "Longitude": 6.1430043
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 26",
+        "Latitude": 46.1808072,
+        "Longitude": 6.1415989
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 28",
+        "Latitude": 46.1811582,
+        "Longitude": 6.1435373
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 30",
+        "Latitude": 46.181278,
+        "Longitude": 6.1438783
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 32",
+        "Latitude": 46.1813356,
+        "Longitude": 6.1440052
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 34",
+        "Latitude": 46.1813932,
+        "Longitude": 6.1441321
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 36",
+        "Latitude": 46.1814508,
+        "Longitude": 6.144259
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Joseph Girard 38",
+        "Latitude": 46.1815084,
+        "Longitude": 6.1443858
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Sigismond 2",
+        "Latitude": 46.1815508,
+        "Longitude": 6.1447913
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Sigismond 4",
+        "Latitude": 46.209622,
+        "Longitude": 6.1472186
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Sigismond 6",
+        "Latitude": 46.1813641,
+        "Longitude": 6.1449494
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Sigismond 8",
+        "Latitude": 46.1812815,
+        "Longitude": 6.1450399
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tannerie 4 bis",
+        "Latitude": 46.182182,
+        "Longitude": 6.1421201
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tannerie 2",
+        "Latitude": 46.1822337,
+        "Longitude": 6.1425145
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tannerie 4",
+        "Latitude": 46.182134,
+        "Longitude": 6.1424096
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tannerie 6",
+        "Latitude": 46.1819467,
+        "Longitude": 6.1424724
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tannerie 8",
+        "Latitude": 46.1818952,
+        "Longitude": 6.1425425
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tannerie 10",
+        "Latitude": 46.1816834,
+        "Longitude": 6.1428289
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Tannerie 12",
+        "Latitude": 46.1815827,
+        "Longitude": 6.1429653
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Vieux Canal 6",
+        "Latitude": 46.1805598,
+        "Longitude": 6.138705
+    },
+    {
+        "Zone": 13,
+        "Adresse": "Vieux Canal 1",
+        "Latitude": 46.1804423,
+        "Longitude": 6.1390418
+    }
+]
