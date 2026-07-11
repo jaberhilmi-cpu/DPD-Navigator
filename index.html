@@ -165,9 +165,31 @@ function matchVisionAddress(addr){
   return best;
 }
 
-async function importTourWithVision(files){/* patched */
+async function geocodeMissingAddress(addr){
+ const queries=[addr+", Genève, Suisse",addr+", Carouge, Suisse",addr+", Les Acacias, Genève, Suisse"];
+ for(const q of queries){
+  try{
+   const r=await fetch("https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=ch&q="+encodeURIComponent(q),{headers:{"Accept":"application/json"}});
+   if(!r.ok)continue;
+   const rows=await r.json();
+   if(rows.length){
+    const lat=parseFloat(rows[0].lat),lon=parseFloat(rows[0].lon);
+    let nearest=null,dist=Infinity;
+    for(const p of allData){
+     if(!Number.isFinite(Number(p.Latitude))||!Number.isFinite(Number(p.Longitude)))continue;
+     const d=(Number(p.Latitude)-lat)**2+(Number(p.Longitude)-lon)**2;
+     if(d<dist){dist=d;nearest=p;}
+    }
+    return {Zone:nearest?nearest.Zone:"?",Adresse:addr,Latitude:lat,Longitude:lon,Code:"",External:true};
+   }
+  }catch(e){console.warn("Geocodage impossible",q,e);}
+ }
+ return null;
+}
 
- if(!files||!files.length)return;ocrMatches=[];
+async function importTourWithVision(files){
+ if(!files||!files.length)return;
+ ocrMatches=[];
  const modal=document.getElementById("ocrModal"),status=document.getElementById("ocrStatus"),results=document.getElementById("ocrResults");
  modal.style.display="block";results.innerHTML="";status.textContent="Envoi des photos pour analyse Vision...";
  try{
@@ -175,12 +197,28 @@ async function importTourWithVision(files){/* patched */
   const response=await fetch("https://dpd-navigator-api.jaber-hilmi.workers.dev/api/import-tour",{method:"POST",body:form});
   if(!response.ok)throw new Error("Serveur Vision indisponible ("+response.status+")");
   const data=await response.json(),addresses=Array.isArray(data.addresses)?data.addresses:[];
-  for(const addr of addresses){const best=matchVisionAddress(addr);if(best){const id=pointId(best.point);if(!ocrMatches.some(x=>x.id===id))ocrMatches.push({id,point:best.point,source:addr});}else results.innerHTML+=`<div class="ocr-row ocr-bad">✗ Non reconnue : <b>${addr}</b></div>`;}
-  results.innerHTML+=ocrMatches.map(m=>`<div class="ocr-row ocr-ok">✓ <b>${m.point.Adresse}</b><br><small>Vision : ${m.source}</small></div>`).join("");
+  for(const addr of addresses){
+   let best=matchVisionAddress(addr);
+   let external=false;
+   if(!best){
+    status.textContent="Recherche GPS de "+addr+"...";
+    const point=await geocodeMissingAddress(addr);
+    if(point){allData.push(point);best={point,score:1};external=true;}
+   }
+   if(best){
+    const id=pointId(best.point);
+    if(!ocrMatches.some(x=>x.id===id))ocrMatches.push({id,point:best.point,source:addr,external});
+   }else results.innerHTML+=`<div class="ocr-row ocr-bad">✗ Non reconnue : <b>${addr}</b></div>`;
+  }
+  results.innerHTML+=ocrMatches.map(m=>`<div class="ocr-row ocr-ok">✓ <b>${m.point.Adresse}</b>${m.external?"<br><small>Adresse ajoutée automatiquement par GPS</small>":`<br><small>Vision : ${m.source}</small>`}</div>`).join("");
   status.textContent=`${ocrMatches.length} adresse(s) reconnue(s). Vérifie puis valide.`;
- }catch(e){status.textContent="Le serveur Vision doit être configuré.";results.innerHTML=`<div class="ocr-row ocr-bad">${e.message}</div>`;}
+ }catch(e){
+  status.textContent="Erreur d'import.";
+  results.innerHTML=`<div class="ocr-row ocr-bad">${e.message}</div>`;
+ }
  document.getElementById("pdaPhotos").value="";
 }
+
 function validateOcrImport(){for(const m of ocrMatches)selected[m.id]=true;save();updateStats();displayZone(document.getElementById("zoneSelect").value);closeOcr();}
 function closeOcr(){document.getElementById("ocrModal").style.display="none";}
 
@@ -259,7 +297,7 @@ function displayZone(zone) {
 }
 
 
-fetch("zones.json?v=7", { cache: "no-store" })
+fetch("zones.json?v=9", { cache: "no-store" })
 
     .then(response => response.json())
 
