@@ -165,7 +165,8 @@ function matchVisionAddress(addr){
   return best;
 }
 
-async function importTourWithVision(files){
+async function importTourWithVision(files){/* patched */
+
  if(!files||!files.length)return;ocrMatches=[];
  const modal=document.getElementById("ocrModal"),status=document.getElementById("ocrStatus"),results=document.getElementById("ocrResults");
  modal.style.display="block";results.innerHTML="";status.textContent="Envoi des photos pour analyse Vision...";
