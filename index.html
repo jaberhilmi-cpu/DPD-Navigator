@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#1f2937">
-    <meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1f2937">
+<meta name="mobile-web-app-capable" content="yes">
 
     <title>DPD Navigator - Tournée 122</title>
 
@@ -34,8 +33,10 @@
             top: 10px;
             left: 50px;
             z-index: 1000;
+
             background: white;
             padding: 10px;
+
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
@@ -50,84 +51,13 @@
             font-weight: bold;
             color: #c00000;
         }
-
-        .tour-panel {
-            position: absolute;
-            top: 70px;
-            left: 10px;
-            z-index: 1000;
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,.3);
-        }
-
-        .done-btn,
-        .reset-btn {
-            margin-top: 8px;
-            padding: 8px;
-            border: 0;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-
-        .done-btn {
-            background: #16a34a;
-            color: white;
-        }
-
-        .reset-btn {
-            background: #dc2626;
-            color: white;
-        }
-
-        .ocr-btn {
-            margin-top: 8px;
-            padding: 8px;
-            border: 0;
-            border-radius: 6px;
-            font-weight: bold;
-            background: #2563eb;
-            color: white;
-        }
-
-        .ocr-modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 3000;
-            background: rgba(0,0,0,.65);
-            padding: 12px;
-            overflow: auto;
-        }
-
-        .ocr-box {
-            background: white;
-            border-radius: 10px;
-            padding: 14px;
-            max-width: 650px;
-            margin: auto;
-        }
-
-        .ocr-results {
-            max-height: 45vh;
-            overflow: auto;
-            margin: 10px 0;
-        }
-
-        .ocr-ok {
-            color: #15803d;
-        }
-
-        .ocr-bad {
-            color: #b91c1c;
-        }
-
-        .ocr-row {
-            padding: 7px;
-            border-bottom: 1px solid #ddd;
-        }
-    </style>
+    .tour-panel{position:absolute;top:70px;left:10px;z-index:1000;background:white;padding:10px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.3)}.done-btn,.reset-btn{margin-top:8px;padding:8px;border:0;border-radius:6px;font-weight:bold}.done-btn{background:#16a34a;color:white}.reset-btn{background:#dc2626;color:white}
+.ocr-btn{margin-top:8px;padding:8px;border:0;border-radius:6px;font-weight:bold;background:#2563eb;color:white}
+.ocr-modal{display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,.65);padding:12px;overflow:auto}
+.ocr-box{background:white;border-radius:10px;padding:14px;max-width:650px;margin:auto}
+.ocr-results{max-height:45vh;overflow:auto;margin:10px 0}
+.ocr-ok{color:#15803d}.ocr-bad{color:#b91c1c}.ocr-row{padding:7px;border-bottom:1px solid #ddd}
+</style>
 </head>
 
 <body>
@@ -138,88 +68,22 @@
     </select>
 </div>
 
-<div class="tour-panel">
-    <b>Tournée du jour</b>
-    <br>
-
-    <span id="tourStats">0 sélectionnée</span>
-
-    <br>
-
-    <button
-        class="ocr-btn"
-        onclick="document.getElementById('pdaPhotos').click()"
-    >
-        📷 Importer la tournée
-    </button>
-
-    <input
-        id="pdaPhotos"
-        type="file"
-        accept="image/*"
-        capture="environment"
-        multiple
-        hidden
-        onchange="importTourWithVision(this.files)"
-    >
-
-    <br>
-
-    <button class="done-btn" onclick="startTour()">
-        Démarrer la tournée
-    </button>
-
-    <button class="reset-btn" onclick="newTour()">
-        Nouvelle tournée
-    </button>
-</div>
-
-<div id="map"></div>
-
-<div id="ocrModal" class="ocr-modal">
-    <div class="ocr-box">
-
-        <b>Import de la tournée</b>
-
-        <div id="ocrStatus">
-            Préparation...
-        </div>
-
-        <div
-            id="ocrResults"
-            class="ocr-results"
-        ></div>
-
-        <button
-            class="done-btn"
-            onclick="validateOcrImport()"
-        >
-            ✓ Ajouter les adresses reconnues
-        </button>
-
-        <button
-            class="reset-btn"
-            onclick="closeOcr()"
-        >
-            Annuler
-        </button>
-
-    </div>
-</div>
-
+<div class="tour-panel"><b>Tournée du jour</b><br><span id="tourStats">0 sélectionnée</span><br><button class="ocr-btn" onclick="document.getElementById('pdaPhotos').click()">📷 Importer la tournée</button>
+<input id="pdaPhotos" type="file" accept="image/*" capture="environment" multiple hidden onchange="importTourWithVision(this.files)">
+<br><button class="done-btn" onclick="startTour()">Démarrer la tournée</button> <button class="reset-btn" onclick="newTour()">Nouvelle tournée</button></div><div id="map"></div>
+<div id="ocrModal" class="ocr-modal"><div class="ocr-box">
+<b>Import de la tournée</b><div id="ocrStatus">Préparation...</div>
+<div id="ocrResults" class="ocr-results"></div>
+<button class="done-btn" onclick="validateOcrImport()">✓ Ajouter les adresses reconnues</button>
+<button class="reset-btn" onclick="closeOcr()">Annuler</button>
+</div></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-
 
 <script>
 
-const map = L.map("map").setView(
-    [46.19, 6.14],
-    13
-);
-
+const map = L.map("map").setView([46.19, 6.14], 13);
 
 L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -228,7 +92,6 @@ L.tileLayer(
         attribution: "© OpenStreetMap"
     }
 ).addTo(map);
-
 
 
 const zoneColors = {
@@ -248,894 +111,96 @@ const zoneColors = {
 };
 
 
-
 let allData = [];
 
-
-let markersLayer =
-    L.layerGroup().addTo(map);
-
-
-let selected =
-    JSON.parse(
-        localStorage.getItem(
-            "tournee122_selected"
-        ) || "{}"
-    );
-
-
-let delivered =
-    JSON.parse(
-        localStorage.getItem(
-            "tournee122_delivered"
-        ) || "{}"
-    );
-
-
-let tourStarted =
-    localStorage.getItem(
-        "tournee122_started"
-    ) === "1";
+let markersLayer=L.layerGroup().addTo(map);
+let selected=JSON.parse(localStorage.getItem("tournee122_selected")||"{}"),delivered=JSON.parse(localStorage.getItem("tournee122_delivered")||"{}"),tourStarted=localStorage.getItem("tournee122_started")==="1";
+function pointId(p){return String(p.Zone)+"|"+p.Adresse}
+function save(){localStorage.setItem("tournee122_selected",JSON.stringify(selected));localStorage.setItem("tournee122_delivered",JSON.stringify(delivered));}
+function updateStats(){let pts=allData.filter(p=>selected[pointId(p)]),done=pts.filter(p=>delivered[pointId(p)]).length;document.getElementById("tourStats").textContent=tourStarted?`${pts.length} à livrer — ${done} livrées — ${pts.length-done} restantes`:`${pts.length} sélectionnées`;}
+function toggleSelected(id){selected[id]=!selected[id];save();displayZone(document.getElementById("zoneSelect").value);updateStats();}
+function toggleDelivered(id){delivered[id]=!delivered[id];save();displayZone(document.getElementById("zoneSelect").value);updateStats();}
+function startTour(){if(!Object.values(selected).some(Boolean)){alert("Sélectionne d'abord les adresses du jour.");return;}tourStarted=true;localStorage.setItem("tournee122_started","1");displayZone(document.getElementById("zoneSelect").value);updateStats();}
+function newTour(){if(confirm("Effacer la tournée du jour ?")){selected={};delivered={};tourStarted=false;localStorage.removeItem("tournee122_selected");localStorage.removeItem("tournee122_delivered");localStorage.removeItem("tournee122_started");displayZone(document.getElementById("zoneSelect").value);updateStats();}}
 
 
 
-function pointId(p) {
-    return String(p.Zone) + "|" + p.Adresse;
-}
+let ocrMatches=[];
+function normText(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();}
+function matchVisionAddress(addr){
+  const n = normText(addr);
+  const numMatch = n.match(/\b(\d+)\s*(bis|ter)?\b/);
+  const number = numMatch ? numMatch[1] : "";
+  const suffix = numMatch && numMatch[2] ? numMatch[2] : "";
 
+  const street = n.replace(/\b\d+\s*(?:bis|ter)?\b/g," ")
+                  .replace(/\b(route|rte|rue|avenue|av|chemin|ch|impasse|place|quai|boulevard|bd)\b/g," ")
+                  .replace(/\s+/g," ").trim();
 
+  let best=null;
 
-function save() {
+  for(const p of allData){
+    const pn=normText(p.Adresse);
+    const pNum=pn.match(/\b(\d+)\s*(bis|ter)?\b/);
+    const pNumber=pNum?pNum[1]:"";
+    const pSuffix=pNum&&pNum[2]?pNum[2]:"";
 
-    localStorage.setItem(
-        "tournee122_selected",
-        JSON.stringify(selected)
-    );
+    if(number && number!==pNumber) continue;
+    if(suffix && suffix!==pSuffix) continue;
 
-    localStorage.setItem(
-        "tournee122_delivered",
-        JSON.stringify(delivered)
-    );
-}
+    const pStreet=pn.replace(/\b\d+\s*(?:bis|ter)?\b/g," ")
+                    .replace(/\b(route|rte|rue|avenue|av|chemin|ch|impasse|place|quai|boulevard|bd)\b/g," ")
+                    .replace(/\s+/g," ").trim();
 
-
-
-function updateStats() {
-
-    const pts =
-        allData.filter(
-            p => selected[pointId(p)]
-        );
-
-    const done =
-        pts.filter(
-            p => delivered[pointId(p)]
-        ).length;
-
-
-    document
-        .getElementById("tourStats")
-        .textContent =
-
-        tourStarted
-
-        ? `${pts.length} à livrer — ${done} livrées — ${pts.length - done} restantes`
-
-        : `${pts.length} sélectionnées`;
-}
-
-
-
-function toggleSelected(id) {
-
-    selected[id] = !selected[id];
-
-    save();
-
-    displayZone(
-        document
-            .getElementById("zoneSelect")
-            .value
-    );
-
-    updateStats();
-}
-
-
-
-function toggleDelivered(id) {
-
-    delivered[id] = !delivered[id];
-
-    save();
-
-    displayZone(
-        document
-            .getElementById("zoneSelect")
-            .value
-    );
-
-    updateStats();
-}
-
-
-
-function startTour() {
-
-    if (
-        !Object
-            .values(selected)
-            .some(Boolean)
-    ) {
-
-        alert(
-            "Sélectionne d'abord les adresses du jour."
-        );
-
-        return;
+    const words=street.split(" ").filter(w=>w.length>2);
+    let hits=0;
+    for(const w of words){
+      if(pStreet.includes(w)) hits++;
     }
-
-
-    tourStarted = true;
-
-
-    localStorage.setItem(
-        "tournee122_started",
-        "1"
-    );
-
-
-    displayZone(
-        document
-            .getElementById("zoneSelect")
-            .value
-    );
-
-
-    updateStats();
+    const score=words.length?hits/words.length:0;
+    if(score>=0.5 && (!best || score>best.score)){
+      best={point:p,score};
+    }
+  }
+  return best;
 }
 
-
-
-function newTour() {
-
-    if (
-        confirm(
-            "Effacer la tournée du jour ?"
-        )
-    ) {
-
-        selected = {};
-
-        delivered = {};
-
-        tourStarted = false;
-
-
-        localStorage.removeItem(
-            "tournee122_selected"
-        );
-
-        localStorage.removeItem(
-            "tournee122_delivered"
-        );
-
-        localStorage.removeItem(
-            "tournee122_started"
-        );
-
-
-        displayZone(
-            document
-                .getElementById("zoneSelect")
-                .value
-        );
-
-
-        updateStats();
-    }
+async function importTourWithVision(files){
+ if(!files||!files.length)return;ocrMatches=[];
+ const modal=document.getElementById("ocrModal"),status=document.getElementById("ocrStatus"),results=document.getElementById("ocrResults");
+ modal.style.display="block";results.innerHTML="";status.textContent="Envoi des photos pour analyse Vision...";
+ try{
+  const form=new FormData();[...files].forEach(f=>form.append("photos",f));
+  const response=await fetch("https://dpd-navigator-api.jaber-hilmi.workers.dev/api/import-tour",{method:"POST",body:form});
+  if(!response.ok)throw new Error("Serveur Vision indisponible ("+response.status+")");
+  const data=await response.json(),addresses=Array.isArray(data.addresses)?data.addresses:[];
+  for(const addr of addresses){const best=matchVisionAddress(addr);if(best){const id=pointId(best.point);if(!ocrMatches.some(x=>x.id===id))ocrMatches.push({id,point:best.point,source:addr});}else results.innerHTML+=`<div class="ocr-row ocr-bad">✗ Non reconnue : <b>${addr}</b></div>`;}
+  results.innerHTML+=ocrMatches.map(m=>`<div class="ocr-row ocr-ok">✓ <b>${m.point.Adresse}</b><br><small>Vision : ${m.source}</small></div>`).join("");
+  status.textContent=`${ocrMatches.length} adresse(s) reconnue(s). Vérifie puis valide.`;
+ }catch(e){status.textContent="Le serveur Vision doit être configuré.";results.innerHTML=`<div class="ocr-row ocr-bad">${e.message}</div>`;}
+ document.getElementById("pdaPhotos").value="";
 }
-
-
-
-/*
-==================================================
-IMPORT VISION
-==================================================
-*/
-
-
-let ocrMatches = [];
-
-
-
-function normText(v) {
-
-    return String(v || "")
-
-        .normalize("NFD")
-
-        .replace(
-            /[\u0300-\u036f]/g,
-            ""
-        )
-
-        .toLowerCase()
-
-        .replace(
-            /\bavenue\b/g,
-            "av"
-        )
-
-        .replace(
-            /\broute\b/g,
-            "rte"
-        )
-
-        .replace(
-            /\bchemin\b/g,
-            "ch"
-        )
-
-        .replace(
-            /\bboulevard\b/g,
-            "bd"
-        )
-
-        .replace(
-            /[^a-z0-9]+/g,
-            " "
-        )
-
-        .replace(
-            /\s+/g,
-            " "
-        )
-
-        .trim();
-}
-
-
-
-function parseAddress(addr) {
-
-    const normalized =
-        normText(addr);
-
-
-    const match =
-        normalized.match(
-            /\b(\d+)\s*(bis|ter)?\s*$/
-        );
-
-
-    if (!match) {
-
-        return {
-            normalized,
-            number: "",
-            suffix: "",
-            street: normalized
-        };
-    }
-
-
-    return {
-
-        normalized,
-
-        number:
-            match[1],
-
-        suffix:
-            match[2] || "",
-
-        street:
-            normalized
-                .slice(
-                    0,
-                    match.index
-                )
-                .trim()
-    };
-}
-
-
-
-function similarity(a, b) {
-
-    const wordsA =
-        a
-            .split(" ")
-            .filter(
-                w => w.length > 1
-            );
-
-
-    const wordsB =
-        b
-            .split(" ")
-            .filter(
-                w => w.length > 1
-            );
-
-
-    if (
-        !wordsA.length ||
-        !wordsB.length
-    ) {
-
-        return 0;
-    }
-
-
-    let matches = 0;
-
-
-    for (
-        const word of wordsA
-    ) {
-
-        if (
-            wordsB.includes(word)
-        ) {
-
-            matches++;
-        }
-    }
-
-
-    return (
-        matches /
-        Math.max(
-            wordsA.length,
-            wordsB.length
-        )
-    );
-}
-
-
-
-function matchVisionAddress(addr) {
-
-    const vision =
-        parseAddress(addr);
-
-
-    if (!vision.number) {
-
-        return null;
-    }
-
-
-    const candidates = [];
-
-
-    for (
-        const point of allData
-    ) {
-
-        const database =
-            parseAddress(
-                point.Adresse
-            );
-
-
-        /*
-        RÈGLE ABSOLUE
-
-        Le numéro doit être
-        strictement identique.
-
-        5 ≠ 105
-        32 ≠ 132
-        */
-
-        if (
-            database.number !==
-            vision.number
-        ) {
-
-            continue;
-        }
-
-
-        /*
-        Gestion bis / ter
-        */
-
-        if (
-            vision.suffix &&
-            database.suffix &&
-            vision.suffix !==
-            database.suffix
-        ) {
-
-            continue;
-        }
-
-
-        const score =
-            similarity(
-                vision.street,
-                database.street
-            );
-
-
-        candidates.push({
-
-            point,
-
-            score
-
-        });
-    }
-
-
-    candidates.sort(
-        (a, b) =>
-            b.score - a.score
-    );
-
-
-    const best =
-        candidates[0];
-
-
-    /*
-    On refuse une
-    correspondance faible.
-    */
-
-    if (
-        !best ||
-        best.score < 0.65
-    ) {
-
-        return null;
-    }
-
-
-    return best;
-}
-
-
-
-async function importTourWithVision(files) {
-
-    if (
-        !files ||
-        !files.length
-    ) {
-
-        return;
-    }
-
-
-    ocrMatches = [];
-
-
-    const modal =
-        document
-            .getElementById(
-                "ocrModal"
-            );
-
-
-    const status =
-        document
-            .getElementById(
-                "ocrStatus"
-            );
-
-
-    const results =
-        document
-            .getElementById(
-                "ocrResults"
-            );
-
-
-    modal.style.display =
-        "block";
-
-
-    results.innerHTML =
-        "";
-
-
-    status.textContent =
-        "Envoi des photos pour analyse Vision...";
-
-
-    try {
-
-        const form =
-            new FormData();
-
-
-        [...files].forEach(
-            f =>
-                form.append(
-                    "photos",
-                    f
-                )
-        );
-
-
-        const response =
-            await fetch(
-
-                "https://dpd-navigator-api.jaber-hilmi.workers.dev/api/import-tour",
-
-                {
-                    method: "POST",
-                    body: form
-                }
-
-            );
-
-
-        if (!response.ok) {
-
-            throw new Error(
-
-                "Serveur Vision indisponible (" +
-
-                response.status +
-
-                ")"
-            );
-        }
-
-
-        const data =
-            await response.json();
-
-
-        const addresses =
-            Array.isArray(
-                data.addresses
-            )
-
-            ? data.addresses
-
-            : [];
-
-
-        for (
-            const addr of addresses
-        ) {
-
-            const best =
-                matchVisionAddress(
-                    addr
-                );
-
-
-            if (best) {
-
-                const id =
-                    pointId(
-                        best.point
-                    );
-
-
-                if (
-                    !ocrMatches.some(
-                        x =>
-                            x.id === id
-                    )
-                ) {
-
-                    ocrMatches.push({
-
-                        id,
-
-                        point:
-                            best.point,
-
-                        source:
-                            addr
-
-                    });
-                }
-
-            }
-
-            else {
-
-                results.innerHTML +=
-
-                    `<div class="ocr-row ocr-bad">
-
-                    ✗ Non reconnue :
-
-                    <b>${addr}</b>
-
-                    </div>`;
-            }
-        }
-
-
-        results.innerHTML +=
-
-            ocrMatches
-
-                .map(
-
-                    m =>
-
-                    `<div class="ocr-row ocr-ok">
-
-                    ✓ <b>${m.point.Adresse}</b>
-
-                    <br>
-
-                    <small>
-
-                    Vision : ${m.source}
-
-                    </small>
-
-                    </div>`
-
-                )
-
-                .join("");
-
-
-        status.textContent =
-
-            `${ocrMatches.length} adresse(s) reconnue(s). Vérifie puis valide.`;
-
-    }
-
-    catch (e) {
-
-        status.textContent =
-
-            "Le serveur Vision doit être configuré.";
-
-
-        results.innerHTML =
-
-            `<div class="ocr-row ocr-bad">
-
-            ${e.message}
-
-            </div>`;
-    }
-
-
-    document
-        .getElementById(
-            "pdaPhotos"
-        )
-        .value = "";
-}
-
-
-
-function validateOcrImport() {
-
-    for (
-        const m of ocrMatches
-    ) {
-
-        selected[m.id] = true;
-    }
-
-
-    save();
-
-    updateStats();
-
-
-    displayZone(
-
-        document
-
-            .getElementById(
-                "zoneSelect"
-            )
-
-            .value
-    );
-
-
-    closeOcr();
-}
-
-
-
-function closeOcr() {
-
-    document
-        .getElementById(
-            "ocrModal"
-        )
-        .style.display =
-        "none";
-}
-
-
-
-/*
-==================================================
-CARTE ET MARQUEURS
-==================================================
-*/
+function validateOcrImport(){for(const m of ocrMatches)selected[m.id]=true;save();updateStats();displayZone(document.getElementById("zoneSelect").value);closeOcr();}
+function closeOcr(){document.getElementById("ocrModal").style.display="none";}
 
 
 function getMarkerColor(zone) {
 
-    return (
-        zoneColors[zone] ||
-        "#333333"
-    );
-}
+    return zoneColors[zone] || "#333333";
 
+}
 
 
 function createMarker(point) {
-
-    const id =
-        pointId(point);
-
-
-    const isSelected =
-        !!selected[id];
-
-
-    const isDone =
-        !!delivered[id];
-
-
-    const color =
-
-        isDone
-
-        ? "#777"
-
-        : getMarkerColor(
-            point.Zone
-        );
-
-
-    const marker =
-
-        L.circleMarker(
-
-            [
-                point.Latitude,
-                point.Longitude
-            ],
-
-            {
-
-                radius:
-                    isSelected
-                    ? 9
-                    : 7,
-
-                color,
-
-                fillColor:
-                    color,
-
-                fillOpacity:
-                    isDone
-                    ? .25
-                    : .85,
-
-                weight:
-                    isSelected
-                    ? 4
-                    : 2
-            }
-        );
-
-
-    const codePorte =
-
-        point.Code ??
-
-        point.code ??
-
-        point.CODE ??
-
-        "";
-
-
-    let popup =
-
-        `<b>Zone ${point.Zone}</b><br>${point.Adresse}`;
-
-
-    if (
-        String(
-            codePorte
-        ).trim()
-    ) {
-
-        popup +=
-
-            `<br><br>
-
-            <span class="code">
-
-            🔑 ${codePorte}
-
-            </span>`;
-    }
-
-
-    if (!tourStarted) {
-
-        popup +=
-
-            `<br>
-
-            <button
-
-            class="done-btn"
-
-            onclick='toggleSelected(${JSON.stringify(id)})'
-
-            >
-
-            ${
-
-                isSelected
-
-                ? "− Retirer de la tournée"
-
-                : "+ Ajouter à la tournée"
-
-            }
-
-            </button>`;
-    }
-
-
-    else if (isSelected) {
-
-        popup +=
-
-            `<br>
-
-            <button
-
-            class="done-btn"
-
-            onclick='toggleDelivered(${JSON.stringify(id)})'
-
-            >
-
-            ${
-
-                isDone
-
-                ? "↩ Remettre à livrer"
-
-                : "✓ Livré / Terminé"
-
-            }
-
-            </button>`;
-    }
-
-
-    marker.bindPopup(
-        popup
-    );
-
-
-    return marker;
+ const id=pointId(point),isSelected=!!selected[id],isDone=!!delivered[id],color=isDone?"#777":getMarkerColor(point.Zone);
+ const marker=L.circleMarker([point.Latitude,point.Longitude],{radius:isSelected?9:7,color,fillColor:color,fillOpacity:isDone?.25:.85,weight:isSelected?4:2});
+ const codePorte=point.Code??point.code??point.CODE??"";
+ let popup=`<b>Zone ${point.Zone}</b><br>${point.Adresse}`;
+ if(String(codePorte).trim()) popup+=`<br><br><span class="code">🔑 ${codePorte}</span>`;
+ if(!tourStarted) popup+=`<br><button class="done-btn" onclick='toggleSelected(${JSON.stringify(id)})'>${isSelected?"− Retirer de la tournée":"+ Ajouter à la tournée"}</button>`;
+ else if(isSelected) popup+=`<br><button class="done-btn" onclick='toggleDelivered(${JSON.stringify(id)})'>${isDone?"↩ Remettre à livrer":"✓ Livré / Terminé"}</button>`;
+ marker.bindPopup(popup);return marker;
 }
-
-
 
 function displayZone(zone) {
 
@@ -1145,305 +210,124 @@ function displayZone(zone) {
     let filteredData;
 
 
-    if (
-        zone === "all"
-    ) {
+    if (zone === "all") {
 
-        filteredData =
+        filteredData = tourStarted ? allData.filter(p=>selected[pointId(p)]&&!delivered[pointId(p)]) : allData;
 
-            tourStarted
+    } else {
 
-            ? allData.filter(
+        filteredData = allData.filter(
+            point => String(point.Zone) === String(zone) && (!tourStarted || (selected[pointId(point)] && !delivered[pointId(point)]))
+        );
 
-                p =>
-
-                    selected[
-                        pointId(p)
-                    ]
-
-                    &&
-
-                    !delivered[
-                        pointId(p)
-                    ]
-
-            )
-
-            : allData;
-    }
-
-
-    else {
-
-        filteredData =
-
-            allData.filter(
-
-                point =>
-
-                    String(
-                        point.Zone
-                    )
-
-                    ===
-
-                    String(zone)
-
-                    &&
-
-                    (
-                        !tourStarted
-
-                        ||
-
-                        (
-
-                            selected[
-                                pointId(point)
-                            ]
-
-                            &&
-
-                            !delivered[
-                                pointId(point)
-                            ]
-
-                        )
-                    )
-            );
     }
 
 
     const bounds = [];
 
 
-    filteredData.forEach(
+    filteredData.forEach(point => {
 
-        point => {
+        if (
+            point.Latitude !== null &&
+            point.Longitude !== null
+        ) {
 
-            if (
+            const marker = createMarker(point);
 
-                point.Latitude !== null
+            marker.addTo(markersLayer);
 
-                &&
+            bounds.push([
+                point.Latitude,
+                point.Longitude
+            ]);
 
-                point.Longitude !== null
-
-            ) {
-
-                const marker =
-
-                    createMarker(
-                        point
-                    );
-
-
-                marker.addTo(
-                    markersLayer
-                );
-
-
-                bounds.push([
-
-                    point.Latitude,
-
-                    point.Longitude
-
-                ]);
-            }
         }
-    );
+
+    });
 
 
-    if (
-        bounds.length > 0
-    ) {
+    if (bounds.length > 0) {
 
-        map.fitBounds(
+        map.fitBounds(bounds, {
+            padding: [30, 30]
+        });
 
-            bounds,
-
-            {
-                padding:
-                    [30, 30]
-            }
-        );
     }
+
 }
 
 
+fetch("zones.json?v=7", { cache: "no-store" })
 
-/*
-==================================================
-CHARGEMENT DES ADRESSES
-==================================================
-*/
+    .then(response => response.json())
 
+    .then(data => {
 
-fetch(
-    "zones.json?v=8",
-    {
-        cache:
-            "no-store"
-    }
-)
-
-.then(
-    response =>
-        response.json()
-)
-
-.then(
-    data => {
-
-        allData = data;
-
-        updateStats();
+        allData = data; updateStats();
 
 
         const zones = [
 
             ...new Set(
 
-                data.map(
+                data.map(point => point.Zone)
 
-                    point =>
-                        point.Zone
-
-                )
             )
 
         ].sort(
 
-            (a, b) =>
+            (a, b) => Number(a) - Number(b)
 
-                Number(a) -
-
-                Number(b)
         );
 
 
-        const select =
-
-            document
-                .getElementById(
-                    "zoneSelect"
-                );
+        const select = document.getElementById("zoneSelect");
 
 
-        zones.forEach(
+        zones.forEach(zone => {
 
-            zone => {
+            const option = document.createElement("option");
 
-                const option =
+            option.value = zone;
 
-                    document
-                        .createElement(
-                            "option"
-                        );
+            option.textContent = "Zone " + zone;
 
+            select.appendChild(option);
 
-                option.value =
-                    zone;
+        });
 
 
-                option.textContent =
+        select.addEventListener("change", function() {
 
-                    "Zone " +
-                    zone;
+            displayZone(this.value);
 
-
-                select.appendChild(
-                    option
-                );
-            }
-        );
+        });
 
 
-        select.addEventListener(
+        displayZone("all");
 
-            "change",
+    })
 
-            function() {
+    .catch(error => {
 
-                displayZone(
-                    this.value
-                );
-            }
-        );
+        console.error(error);
 
+        alert("Impossible de charger zones.json");
 
-        displayZone(
-            "all"
-        );
-    }
-)
-
-.catch(
-
-    error => {
-
-        console.error(
-            error
-        );
-
-
-        alert(
-            "Impossible de charger zones.json"
-        );
-    }
-);
+    });
 
 
 </script>
-
 
 <script>
-
-if (
-    "serviceWorker" in navigator
-) {
-
-    window.addEventListener(
-
-        "load",
-
-        () => {
-
-            navigator
-                .serviceWorker
-                .register(
-                    "./service-worker.js"
-                )
-
-                .then(
-
-                    () =>
-
-                        console.log(
-
-                            "Application hors ligne activée"
-
-                        )
-                )
-
-                .catch(
-
-                    error =>
-
-                        console.error(
-
-                            "Erreur Service Worker",
-
-                            error
-
-                        )
-                );
-        }
-    );
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("Application hors ligne activée"))
+      .catch(error => console.error("Erreur Service Worker", error));
+  });
 }
-
 </script>
-
 </body>
 </html>
