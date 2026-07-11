@@ -51,7 +51,7 @@
             font-weight: bold;
             color: #c00000;
         }
-    </style>
+    .tour-panel{position:absolute;top:70px;left:10px;z-index:1000;background:white;padding:10px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.3)}.done-btn,.reset-btn{margin-top:8px;padding:8px;border:0;border-radius:6px;font-weight:bold}.done-btn{background:#16a34a;color:white}.reset-btn{background:#dc2626;color:white}</style>
 </head>
 
 <body>
@@ -62,7 +62,7 @@
     </select>
 </div>
 
-<div id="map"></div>
+<div class="tour-panel"><b>Tournée 122</b><br><span id="tourStats">Chargement...</span><br><button class="reset-btn" onclick="resetTour()">Réinitialiser</button></div><div id="map"></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -98,7 +98,11 @@ const zoneColors = {
 
 let allData = [];
 
-let markersLayer = L.layerGroup().addTo(map);
+let markersLayer=L.layerGroup().addTo(map);let delivered=JSON.parse(localStorage.getItem("tournee122_delivered")||"{}");
+function pointId(p){return String(p.Zone)+"|"+p.Adresse}
+function updateStats(){const n=allData.filter(p=>delivered[pointId(p)]).length;document.getElementById("tourStats").textContent=`${n} terminées / ${allData.length} — ${allData.length-n} restantes`;}
+function toggleDelivered(id){delivered[id]=!delivered[id];localStorage.setItem("tournee122_delivered",JSON.stringify(delivered));displayZone(document.getElementById("zoneSelect").value);updateStats();}
+function resetTour(){if(confirm("Réinitialiser toute la tournée ?")){delivered={};localStorage.removeItem("tournee122_delivered");displayZone(document.getElementById("zoneSelect").value);updateStats();}}
 
 
 function getMarkerColor(zone) {
@@ -109,45 +113,18 @@ function getMarkerColor(zone) {
 
 
 function createMarker(point) {
-
-    const color = getMarkerColor(point.Zone);
-
-    const marker = L.circleMarker(
-        [point.Latitude, point.Longitude],
-        {
-            radius: 7,
-            color: color,
-            fillColor: color,
-            fillOpacity: 0.85,
-            weight: 2
-        }
-    );
-
-
-    let popup = `
-        <b>Zone ${point.Zone}</b><br>
-        ${point.Adresse}
-    `;
-
-
-    if (point.Code && point.Code.trim() !== "") {
-
-        popup += `
-            <br><br>
-            <span class="code">
-                🔑 ${point.Code}
-            </span>
-        `;
-
+    const id=pointId(point); const isDone=!!delivered[id]; const color=isDone?"#777777":getMarkerColor(point.Zone);
+    const marker = L.circleMarker([point.Latitude, point.Longitude], {
+        radius: 7, color: color, fillColor: color, fillOpacity: isDone ? 0.35 : 0.85, weight: 2
+    });
+    const codePorte = point.Code ?? point.code ?? point.CODE ?? "";
+    let popup = `<b>Zone ${point.Zone}</b><br>${point.Adresse}`;
+    if (String(codePorte).trim() !== "") {
+        popup += `<br><br><span class="code">🔑 Code porte : ${codePorte}</span>`;
     }
-
-
-    marker.bindPopup(popup);
-
+    popup += `<br><button class="done-btn" onclick='toggleDelivered(${JSON.stringify(id)})'>${isDone?"↩ Remettre en tournée":"✓ Livré / Terminé"}</button>`; marker.bindPopup(popup);
     return marker;
-
 }
-
 
 function displayZone(zone) {
 
@@ -205,13 +182,13 @@ function displayZone(zone) {
 }
 
 
-fetch("zones.json")
+fetch("zones.json?v=4", { cache: "no-store" })
 
     .then(response => response.json())
 
     .then(data => {
 
-        allData = data;
+        allData = data; updateStats();
 
 
         const zones = [
