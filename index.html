@@ -62,7 +62,7 @@
     </select>
 </div>
 
-<div class="tour-panel"><b>Tournée 122</b><br><span id="tourStats">Chargement...</span><br><button class="reset-btn" onclick="resetTour()">Réinitialiser</button></div><div id="map"></div>
+<div class="tour-panel"><b>Tournée du jour</b><br><span id="tourStats">0 sélectionnée</span><br><button class="done-btn" onclick="startTour()">Démarrer la tournée</button> <button class="reset-btn" onclick="newTour()">Nouvelle tournée</button></div><div id="map"></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -98,11 +98,15 @@ const zoneColors = {
 
 let allData = [];
 
-let markersLayer=L.layerGroup().addTo(map);let delivered=JSON.parse(localStorage.getItem("tournee122_delivered")||"{}");
+let markersLayer=L.layerGroup().addTo(map);
+let selected=JSON.parse(localStorage.getItem("tournee122_selected")||"{}"),delivered=JSON.parse(localStorage.getItem("tournee122_delivered")||"{}"),tourStarted=localStorage.getItem("tournee122_started")==="1";
 function pointId(p){return String(p.Zone)+"|"+p.Adresse}
-function updateStats(){const n=allData.filter(p=>delivered[pointId(p)]).length;document.getElementById("tourStats").textContent=`${n} terminées / ${allData.length} — ${allData.length-n} restantes`;}
-function toggleDelivered(id){delivered[id]=!delivered[id];localStorage.setItem("tournee122_delivered",JSON.stringify(delivered));displayZone(document.getElementById("zoneSelect").value);updateStats();}
-function resetTour(){if(confirm("Réinitialiser toute la tournée ?")){delivered={};localStorage.removeItem("tournee122_delivered");displayZone(document.getElementById("zoneSelect").value);updateStats();}}
+function save(){localStorage.setItem("tournee122_selected",JSON.stringify(selected));localStorage.setItem("tournee122_delivered",JSON.stringify(delivered));}
+function updateStats(){let pts=allData.filter(p=>selected[pointId(p)]),done=pts.filter(p=>delivered[pointId(p)]).length;document.getElementById("tourStats").textContent=tourStarted?`${pts.length} à livrer — ${done} livrées — ${pts.length-done} restantes`:`${pts.length} sélectionnées`;}
+function toggleSelected(id){selected[id]=!selected[id];save();displayZone(document.getElementById("zoneSelect").value);updateStats();}
+function toggleDelivered(id){delivered[id]=!delivered[id];save();displayZone(document.getElementById("zoneSelect").value);updateStats();}
+function startTour(){if(!Object.values(selected).some(Boolean)){alert("Sélectionne d'abord les adresses du jour.");return;}tourStarted=true;localStorage.setItem("tournee122_started","1");displayZone(document.getElementById("zoneSelect").value);updateStats();}
+function newTour(){if(confirm("Effacer la tournée du jour ?")){selected={};delivered={};tourStarted=false;localStorage.removeItem("tournee122_selected");localStorage.removeItem("tournee122_delivered");localStorage.removeItem("tournee122_started");displayZone(document.getElementById("zoneSelect").value);updateStats();}}
 
 
 function getMarkerColor(zone) {
@@ -113,17 +117,14 @@ function getMarkerColor(zone) {
 
 
 function createMarker(point) {
-    const id=pointId(point); const isDone=!!delivered[id]; const color=isDone?"#777777":getMarkerColor(point.Zone);
-    const marker = L.circleMarker([point.Latitude, point.Longitude], {
-        radius: 7, color: color, fillColor: color, fillOpacity: isDone ? 0.35 : 0.85, weight: 2
-    });
-    const codePorte = point.Code ?? point.code ?? point.CODE ?? "";
-    let popup = `<b>Zone ${point.Zone}</b><br>${point.Adresse}`;
-    if (String(codePorte).trim() !== "") {
-        popup += `<br><br><span class="code">🔑 Code porte : ${codePorte}</span>`;
-    }
-    popup += `<br><button class="done-btn" onclick='toggleDelivered(${JSON.stringify(id)})'>${isDone?"↩ Remettre en tournée":"✓ Livré / Terminé"}</button>`; marker.bindPopup(popup);
-    return marker;
+ const id=pointId(point),isSelected=!!selected[id],isDone=!!delivered[id],color=isDone?"#777":getMarkerColor(point.Zone);
+ const marker=L.circleMarker([point.Latitude,point.Longitude],{radius:isSelected?9:7,color,fillColor:color,fillOpacity:isDone?.25:.85,weight:isSelected?4:2});
+ const codePorte=point.Code??point.code??point.CODE??"";
+ let popup=`<b>Zone ${point.Zone}</b><br>${point.Adresse}`;
+ if(String(codePorte).trim()) popup+=`<br><br><span class="code">🔑 ${codePorte}</span>`;
+ if(!tourStarted) popup+=`<br><button class="done-btn" onclick='toggleSelected(${JSON.stringify(id)})'>${isSelected?"− Retirer de la tournée":"+ Ajouter à la tournée"}</button>`;
+ else if(isSelected) popup+=`<br><button class="done-btn" onclick='toggleDelivered(${JSON.stringify(id)})'>${isDone?"↩ Remettre à livrer":"✓ Livré / Terminé"}</button>`;
+ marker.bindPopup(popup);return marker;
 }
 
 function displayZone(zone) {
@@ -136,12 +137,12 @@ function displayZone(zone) {
 
     if (zone === "all") {
 
-        filteredData = allData;
+        filteredData = tourStarted ? allData.filter(p=>selected[pointId(p)]&&!delivered[pointId(p)]) : allData;
 
     } else {
 
         filteredData = allData.filter(
-            point => String(point.Zone) === String(zone)
+            point => String(point.Zone) === String(zone) && (!tourStarted || (selected[pointId(point)] && !delivered[pointId(point)]))
         );
 
     }
