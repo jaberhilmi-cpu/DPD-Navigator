@@ -126,62 +126,89 @@ function newTour(){if(confirm("Effacer la tournée du jour ?")){selected={};deli
 
 
 let ocrMatches=[];
-function normText(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();}
+let ocrRawTexts=[];
+
+function normText(v){
+ return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+ .toLowerCase().replace(/[^a-z0-9]+/g," ").replace(/\s+/g," ").trim();
+}
 function addressParts(addr){
- const n=normText(addr), m=n.match(/^(.*?)(?:\s+)(\d+\s*(?:bis|ter)?)$/);
+ const n=normText(addr),m=n.match(/^(.*?)(?:\s+)(\d+\s*(?:bis|ter)?)$/);
  return m?{street:m[1].trim(),num:m[2].replace(/\s/g,"")}:{street:n,num:""};
 }
-function similarity(a,b){
- a=normText(a);b=normText(b);if(a===b)return 1;
- const A=new Set(a.split(" ").filter(x=>x.length>2)),B=new Set(b.split(" ").filter(x=>x.length>2));
- const inter=[...A].filter(x=>B.has(x)).length, union=new Set([...A,...B]).size;
- return union?inter/union:0;
+function editSimilarity(a,b){
+ a=normText(a);b=normText(b);if(!a||!b)return 0;if(a===b)return 1;
+ const dp=Array.from({length:a.length+1},()=>Array(b.length+1).fill(0));
+ for(let i=0;i<=a.length;i++)dp[i][0]=i;
+ for(let j=0;j<=b.length;j++)dp[0][j]=j;
+ for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)
+  dp[i][j]=Math.min(dp[i-1][j]+1,dp[i][j-1]+1,dp[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
+ return 1-dp[a.length][b.length]/Math.max(a.length,b.length);
 }
-function findAddressInText(text){
- const t=normText(text), found=[];
+function streetScore(street,text){
+ const sw=normText(street).split(" ").filter(w=>w.length>2);
+ const tw=normText(text).split(" ");
+ if(!sw.length)return 0;
+ let total=0;
+ for(const w of sw){
+   let best=0;
+   for(const x of tw)best=Math.max(best,editSimilarity(w,x));
+   if(best>=0.68)total+=best;
+ }
+ return total/sw.length;
+}
+function findAddressesInFullText(rawText){
+ const t=normText(rawText),found=[];
  for(const p of allData){
-   const ap=addressParts(p.Adresse);
-   if(!ap.num)continue;
-   const numberRx=new RegExp("(^|\\\\s)"+ap.num.replace("bis","\\\\s*bis")+"(\\\\s|$)");
+   const ap=addressParts(p.Adresse); if(!ap.num)continue;
+   const numberPattern=ap.num.replace(/([.*+?^${}()|[\]\\])/g,"\\$1").replace("bis","\\s*bis");
+   const numberRx=new RegExp("(^|\\s)"+numberPattern+"(\\s|$)");
    if(!numberRx.test(t))continue;
-   let score=similarity(ap.street,t);
-   const streetWords=ap.street.split(" ").filter(x=>x.length>2);
-   const hits=streetWords.filter(w=>t.includes(w)).length;
-   score=Math.max(score,streetWords.length?hits/streetWords.length:0);
-   if(score>=0.55)found.push({point:p,score});
+   const score=streetScore(ap.street,t);
+   if(score>=0.62)found.push({point:p,score});
  }
  return found.sort((a,b)=>b.score-a.score);
 }
 async function importPdaPhotos(files){
  if(!files||!files.length)return;
- ocrMatches=[];document.getElementById("ocrModal").style.display="block";
+ ocrMatches=[];ocrRawTexts=[];
+ document.getElementById("ocrModal").style.display="block";
  const status=document.getElementById("ocrStatus"),results=document.getElementById("ocrResults");
  results.innerHTML="";
  for(let i=0;i<files.length;i++){
    status.textContent=`Lecture photo ${i+1}/${files.length}...`;
    try{
-     const r=await Tesseract.recognize(files[i],"fra",{logger:m=>{if(m.status==="recognizing text")status.textContent=`Photo ${i+1}/${files.length} — OCR ${Math.round((m.progress||0)*100)}%`;}});
-     const lines=r.data.text.split(/\\n+/).map(x=>x.trim()).filter(Boolean);
-     for(const line of lines){
-       const matches=findAddressInText(line);
-       if(matches.length){
-         const best=matches[0],id=pointId(best.point);
-         if(!ocrMatches.some(x=>x.id===id)){
-           ocrMatches.push({id,point:best.point,line,score:best.score});
-           results.innerHTML+=`<div class="ocr-row ocr-ok">✓ <b>${best.point.Adresse}</b><br><small>${line}</small></div>`;
-         }
-       }
+     const r=await Tesseract.recognize(files[i],"fra",{logger:m=>{
+       if(m.status==="recognizing text")status.textContent=`Photo ${i+1}/${files.length} — OCR ${Math.round((m.progress||0)*100)}%`;
+     }});
+     const raw=r.data.text||"";ocrRawTexts.push(raw);
+     const matches=findAddressesInFullText(raw);
+     for(const best of matches){
+       const id=pointId(best.point);
+       if(!ocrMatches.some(x=>x.id===id))ocrMatches.push({id,point:best.point,score:best.score});
      }
-   }catch(e){results.innerHTML+=`<div class="ocr-row ocr-bad">Erreur OCR photo ${i+1}</div>`;}
+     results.innerHTML+=`<div class="ocr-row"><b>Photo ${i+1}</b> : ${matches.length} correspondance(s)<details><summary>Voir le texte OCR brut</summary><pre style="white-space:pre-wrap;font-size:11px">${raw.replace(/</g,"&lt;")}</pre></details></div>`;
+   }catch(e){
+     results.innerHTML+=`<div class="ocr-row ocr-bad">Erreur OCR photo ${i+1} : ${String(e.message||e)}</div>`;
+   }
  }
- status.textContent=`${ocrMatches.length} adresse(s) reconnue(s). Vérifie puis valide.`;
- if(!ocrMatches.length)results.innerHTML='<div class="ocr-bad">Aucune adresse reconnue. Reprends des photos nettes, écran droit et sans reflet.</div>';
+ if(ocrMatches.length){
+   results.innerHTML+=`<div class="ocr-row ocr-ok"><b>Adresses reconnues :</b></div>`+
+   ocrMatches.map(m=>`<div class="ocr-row ocr-ok">✓ <b>${m.point.Adresse}</b> — Zone ${m.point.Zone}</div>`).join("");
+   status.textContent=`OCR terminé : ${ocrMatches.length} adresse(s) reconnue(s). Vérifie puis valide.`;
+ }else{
+   const chars=ocrRawTexts.join("").trim().length;
+   status.textContent=chars?`OCR réussi (${chars} caractères lus), mais aucune adresse du référentiel n'a été reconnue.`:"OCR illisible : aucun texte exploitable détecté.";
+   results.innerHTML+=`<div class="ocr-row ocr-bad">${chars?"Le texte a bien été lu. Consulte le texte OCR brut ci-dessus pour diagnostiquer les différences avec zones.json.":"Aucun texte exploitable n'a été détecté sur les photos."}</div>`;
+ }
+ document.getElementById("pdaPhotos").value="";
 }
 function validateOcrImport(){
  for(const m of ocrMatches)selected[m.id]=true;
  save();updateStats();displayZone(document.getElementById("zoneSelect").value);closeOcr();
 }
 function closeOcr(){document.getElementById("ocrModal").style.display="none";}
+
 
 function getMarkerColor(zone) {
 
@@ -257,7 +284,7 @@ function displayZone(zone) {
 }
 
 
-fetch("zones.json?v=4", { cache: "no-store" })
+fetch("zones.json?v=6", { cache: "no-store" })
 
     .then(response => response.json())
 
