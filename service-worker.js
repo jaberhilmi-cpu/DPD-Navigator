@@ -1,4 +1,4 @@
-const CACHE_NAME = "tournee-122-v13";
+const CACHE_NAME = "tournee-122-v14";
 
 const APP_FILES = [
     "./",
