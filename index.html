@@ -70,7 +70,7 @@
 
 <div class="tour-panel"><b>Tournée du jour</b><br><span id="tourStats">0 sélectionnée</span><br><button class="ocr-btn" onclick="document.getElementById('pdaPhotos').click()">📷 Importer la tournée</button>
 <input id="pdaPhotos" type="file" accept="image/*" capture="environment" multiple hidden onchange="importTourWithVision(this.files)">
-<br><button class="done-btn" onclick="startTour()">Démarrer la tournée</button> <button class="reset-btn" onclick="newTour()">Nouvelle tournée</button></div><div id="map"></div>
+<br><button class="done-btn" onclick="startTour()">Démarrer la tournée</button> <button class="reset-btn" onclick="newTour()">Nouvelle tournée</button><br><button class="reset-btn" onclick="clearLearnedAddresses()">Vider mémoire adresses</button></div><div id="map"></div>
 <div id="ocrModal" class="ocr-modal"><div class="ocr-box">
 <b>Import de la tournée</b><div id="ocrStatus">Préparation...</div>
 <div id="ocrResults" class="ocr-results"></div>
@@ -112,6 +112,12 @@ const zoneColors = {
 
 
 let allData = [];
+const LEARNED_KEY="tournee122_learned_addresses";
+let learnedAddresses=JSON.parse(localStorage.getItem(LEARNED_KEY)||"{}");
+function learnedKey(addr){return normText(addr);}
+function saveLearnedAddress(point){learnedAddresses[learnedKey(point.Adresse)]=point;localStorage.setItem(LEARNED_KEY,JSON.stringify(learnedAddresses));}
+function getLearnedAddress(addr){return learnedAddresses[learnedKey(addr)]||null;}
+function clearLearnedAddresses(){if(confirm("Effacer la mémoire des adresses apprises ?")){learnedAddresses={};localStorage.removeItem(LEARNED_KEY);alert("Mémoire des adresses vidée.");}}
 
 let markersLayer=L.layerGroup().addTo(map);
 let selected=JSON.parse(localStorage.getItem("tournee122_selected")||"{}"),delivered=JSON.parse(localStorage.getItem("tournee122_delivered")||"{}"),tourStarted=localStorage.getItem("tournee122_started")==="1";
@@ -201,9 +207,13 @@ async function importTourWithVision(files){
    let best=matchVisionAddress(addr);
    let external=false;
    if(!best){
+    const learned=getLearnedAddress(addr);
+    if(learned){if(!allData.some(p=>pointId(p)===pointId(learned)))allData.push(learned);best={point:learned,score:1};}
+   }
+   if(!best){
     status.textContent="Recherche GPS de "+addr+"...";
     const point=await geocodeMissingAddress(addr);
-    if(point){allData.push(point);best={point,score:1};external=true;}
+    if(point){allData.push(point);saveLearnedAddress(point);best={point,score:1};external=true;}
    }
    if(best){
     const id=pointId(best.point);
@@ -297,13 +307,15 @@ function displayZone(zone) {
 }
 
 
-fetch("zones.json?v=9", { cache: "no-store" })
+fetch("zones.json?v=11", { cache: "no-store" })
 
     .then(response => response.json())
 
     .then(data => {
 
-        allData = data; updateStats();
+        allData = data;
+        for(const point of Object.values(learnedAddresses)){if(!allData.some(p=>pointId(p)===pointId(point)))allData.push(point);}
+        updateStats();
 
 
         const zones = [
