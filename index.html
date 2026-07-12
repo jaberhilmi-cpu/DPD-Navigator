@@ -127,7 +127,21 @@ function pointId(p){return String(p.Zone)+"|"+p.Adresse}
 function save(){localStorage.setItem("tournee122_selected",JSON.stringify(selected));localStorage.setItem("tournee122_delivered",JSON.stringify(delivered));}
 function updateStats(){let pts=allData.filter(p=>selected[pointId(p)]),done=pts.filter(p=>delivered[pointId(p)]).length;document.getElementById("tourStats").textContent=tourStarted?`${pts.length} à livrer — ${done} livrées — ${pts.length-done} restantes`:`${pts.length} sélectionnées`;}
 function toggleSelected(id){selected[id]=!selected[id];save();displayZone(document.getElementById("zoneSelect").value);updateStats();}
-function toggleDelivered(id){delivered[id]=!delivered[id];save();if(currentNavPoint&&pointId(currentNavPoint)===id&&delivered[id])currentNavPoint=null;displayZone(document.getElementById("zoneSelect").value);updateStats();if(gpsWatchId!==null)navigator.geolocation.getCurrentPosition(updateNavigation);}
+function toggleDelivered(id){
+delivered[id]=!delivered[id];
+save();
+displayZone(document.getElementById("zoneSelect").value);
+updateStats();
+if(delivered[id]){
+  currentNavPoint=null;
+  if(gpsWatchId!==null){
+    navigator.geolocation.getCurrentPosition(async pos=>{
+      currentNavPoint=nearestRemainingPoint(pos.coords.latitude,pos.coords.longitude);
+      await updateNavigation(pos);
+    });
+  }
+}
+}
 function startTour(){if(!Object.values(selected).some(Boolean)){alert("Sélectionne d'abord les adresses du jour.");return;}tourStarted=true;localStorage.setItem("tournee122_started","1");displayZone(document.getElementById("zoneSelect").value);updateStats();}
 function newTour(){if(confirm("Effacer la tournée du jour ?")){selected={};delivered={};tourStarted=false;localStorage.removeItem("tournee122_selected");localStorage.removeItem("tournee122_delivered");localStorage.removeItem("tournee122_started");displayZone(document.getElementById("zoneSelect").value);updateStats();}}
 
