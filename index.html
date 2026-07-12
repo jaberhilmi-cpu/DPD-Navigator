@@ -57,6 +57,8 @@
 .ocr-box{background:white;border-radius:10px;padding:14px;max-width:650px;margin:auto}
 .ocr-results{max-height:45vh;overflow:auto;margin:10px 0}
 .ocr-ok{color:#15803d}.ocr-bad{color:#b91c1c}.ocr-row{padding:7px;border-bottom:1px solid #ddd}
+.nav-btn{margin-top:8px;padding:9px;border:0;border-radius:6px;font-weight:bold;background:#7c3aed;color:white}
+#navInfo{margin-top:8px;font-size:13px;font-weight:bold;max-width:260px}
 </style>
 </head>
 
@@ -70,7 +72,7 @@
 
 <div class="tour-panel"><b>Tournée du jour</b><br><span id="tourStats">0 sélectionnée</span><br><button class="ocr-btn" onclick="document.getElementById('pdaPhotos').click()">📷 Importer la tournée</button>
 <input id="pdaPhotos" type="file" accept="image/*" capture="environment" multiple hidden onchange="importTourWithVision(this.files)">
-<br><button class="done-btn" onclick="startTour()">Démarrer la tournée</button> <button class="reset-btn" onclick="newTour()">Nouvelle tournée</button><br><button class="reset-btn" onclick="clearLearnedAddresses()">Vider mémoire adresses</button></div><div id="map"></div>
+<br><button class="done-btn" onclick="startTour()">Démarrer la tournée</button><br><button class="nav-btn" onclick="startNavigation()">🚚 Navigation GPS</button><div id="navInfo"></div> <button class="reset-btn" onclick="newTour()">Nouvelle tournée</button><br><button class="reset-btn" onclick="clearLearnedAddresses()">Vider mémoire adresses</button></div><div id="map"></div>
 <div id="ocrModal" class="ocr-modal"><div class="ocr-box">
 <b>Import de la tournée</b><div id="ocrStatus">Préparation...</div>
 <div id="ocrResults" class="ocr-results"></div>
@@ -125,7 +127,7 @@ function pointId(p){return String(p.Zone)+"|"+p.Adresse}
 function save(){localStorage.setItem("tournee122_selected",JSON.stringify(selected));localStorage.setItem("tournee122_delivered",JSON.stringify(delivered));}
 function updateStats(){let pts=allData.filter(p=>selected[pointId(p)]),done=pts.filter(p=>delivered[pointId(p)]).length;document.getElementById("tourStats").textContent=tourStarted?`${pts.length} à livrer — ${done} livrées — ${pts.length-done} restantes`:`${pts.length} sélectionnées`;}
 function toggleSelected(id){selected[id]=!selected[id];save();displayZone(document.getElementById("zoneSelect").value);updateStats();}
-function toggleDelivered(id){delivered[id]=!delivered[id];save();displayZone(document.getElementById("zoneSelect").value);updateStats();}
+function toggleDelivered(id){delivered[id]=!delivered[id];save();if(currentNavPoint&&pointId(currentNavPoint)===id&&delivered[id])currentNavPoint=null;displayZone(document.getElementById("zoneSelect").value);updateStats();if(gpsWatchId!==null)navigator.geolocation.getCurrentPosition(updateNavigation);}
 function startTour(){if(!Object.values(selected).some(Boolean)){alert("Sélectionne d'abord les adresses du jour.");return;}tourStarted=true;localStorage.setItem("tournee122_started","1");displayZone(document.getElementById("zoneSelect").value);updateStats();}
 function newTour(){if(confirm("Effacer la tournée du jour ?")){selected={};delivered={};tourStarted=false;localStorage.removeItem("tournee122_selected");localStorage.removeItem("tournee122_delivered");localStorage.removeItem("tournee122_started");displayZone(document.getElementById("zoneSelect").value);updateStats();}}
 
@@ -233,6 +235,51 @@ function validateOcrImport(){for(const m of ocrMatches)selected[m.id]=true;save(
 function closeOcr(){document.getElementById("ocrModal").style.display="none";}
 
 
+
+let gpsWatchId=null,userMarker=null,routeLayer=null,currentNavPoint=null;
+
+function distanceMeters(a,b){
+ const R=6371000,toRad=x=>x*Math.PI/180;
+ const dLat=toRad(b.lat-a.lat),dLon=toRad(b.lon-a.lon);
+ const x=Math.sin(dLat/2)**2+Math.cos(toRad(a.lat))*Math.cos(toRad(b.lat))*Math.sin(dLon/2)**2;
+ return 2*R*Math.asin(Math.sqrt(x));
+}
+function remainingTourPoints(){
+ return allData.filter(p=>selected[pointId(p)]&&!delivered[pointId(p)]&&Number.isFinite(Number(p.Latitude))&&Number.isFinite(Number(p.Longitude)));
+}
+function nearestRemainingPoint(lat,lon){
+ const pts=remainingTourPoints();let best=null,d=Infinity;
+ for(const p of pts){const x=distanceMeters({lat,lon},{lat:Number(p.Latitude),lon:Number(p.Longitude)});if(x<d){d=x;best=p;}}
+ return best;
+}
+async function drawRoute(lat,lon,point){
+ if(routeLayer){map.removeLayer(routeLayer);routeLayer=null;}
+ const url=`https://router.project-osrm.org/route/v1/driving/${lon},${lat};${point.Longitude},${point.Latitude}?overview=full&geometries=geojson&steps=true`;
+ const r=await fetch(url);if(!r.ok)throw new Error("Itinéraire indisponible");
+ const data=await r.json();if(!data.routes||!data.routes.length)throw new Error("Aucun itinéraire");
+ routeLayer=L.geoJSON(data.routes[0].geometry,{weight:6}).addTo(map);
+ map.fitBounds(routeLayer.getBounds(),{padding:[30,30]});
+ const km=(data.routes[0].distance/1000).toFixed(1),min=Math.max(1,Math.round(data.routes[0].duration/60));
+ document.getElementById("navInfo").innerHTML=`Prochain arrêt : ${point.Adresse}<br>${km} km — environ ${min} min`;
+}
+async function updateNavigation(pos){
+ const lat=pos.coords.latitude,lon=pos.coords.longitude;
+ if(!userMarker)userMarker=L.circleMarker([lat,lon],{radius:9,weight:4,fillOpacity:.9}).addTo(map).bindPopup("Votre position");
+ else userMarker.setLatLng([lat,lon]);
+ let next=currentNavPoint;
+ if(!next||delivered[pointId(next)]){next=nearestRemainingPoint(lat,lon);currentNavPoint=next;}
+ if(!next){document.getElementById("navInfo").textContent="Tournée terminée.";stopNavigation();return;}
+ try{await drawRoute(lat,lon,next);}catch(e){document.getElementById("navInfo").textContent=e.message;}
+}
+function startNavigation(){
+ if(!tourStarted){startTour();if(!tourStarted)return;}
+ if(!navigator.geolocation){alert("GPS non disponible.");return;}
+ document.getElementById("navInfo").textContent="Recherche de votre position...";
+ if(gpsWatchId!==null)navigator.geolocation.clearWatch(gpsWatchId);
+ gpsWatchId=navigator.geolocation.watchPosition(updateNavigation,e=>{document.getElementById("navInfo").textContent="Erreur GPS : "+e.message;},{enableHighAccuracy:true,maximumAge:5000,timeout:15000});
+}
+function stopNavigation(){if(gpsWatchId!==null){navigator.geolocation.clearWatch(gpsWatchId);gpsWatchId=null;}}
+
 function getMarkerColor(zone) {
 
     return zoneColors[zone] || "#333333";
@@ -307,7 +354,7 @@ function displayZone(zone) {
 }
 
 
-fetch("zones.json?v=11", { cache: "no-store" })
+fetch("zones.json?v=12", { cache: "no-store" })
 
     .then(response => response.json())
 
